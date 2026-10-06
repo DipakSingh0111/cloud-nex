@@ -498,7 +498,7 @@
                   "description": "We're here to understand your requirements and provide the right IT solutions for your business growth.",
                   "button": {
                     "label": "Get a Quote",
-                    "href": "/contact"
+                    "href": "/quote"
                   }
                 }
               },
@@ -542,7 +542,7 @@
                   "description": "We follow a structured development process to ensure your website is visually appealing, technically sound and aligned with your business objectives. From planning and design to development and testing, we focus on delivering quality at every stage.",
                   "button": {
                     "label": "Get a Quote",
-                    "href": "/contact"
+                    "href": "/quote"
                   },
                   "videoThumbnail": "/images/images_05.jpg",
                   "videoUrl": "#"
