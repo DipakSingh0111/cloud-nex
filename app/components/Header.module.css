@@ -1,0 +1,178 @@
+.headerWrapper {
+  width: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.topbar {
+  background-color: #052136;
+  color: #fff;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconCircle {
+  background-color: #639818;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircle svg {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialCircle {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.socialCircle:hover {
+  background-color: #639818;
+  border-color: #639818;
+}
+
+.socialCircle svg {
+  fill: #fff;
+  width: 14px;
+  height: 14px;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  height: 48px;
+  object-fit: contain;
+}
+
+.logoPlaceholder {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #052136;
+}
+
+.logoPlaceholder span {
+  color: #639818;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: #052136;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.navLink:hover {
+  color: #639818;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #639818;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink.active {
+  color: #639818;
+}
+
+.navLink.active::after {
+  width: 100%;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #74a822 0%, #528010 100%);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(99, 152, 24, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 152, 24, 0.4);
+}
+
+.ctaButton svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover svg {
+  transform: translateX(4px);
+}

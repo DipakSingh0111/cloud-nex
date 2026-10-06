@@ -1,0 +1,1305 @@
+{
+  "topbar": {
+    "phone": "+91 00000 00000",
+    "email": "info@xyz.com",
+    "address": "123, Sector 62, Noida, UP, India",
+    "socials": [
+      {
+        "platform": "facebook",
+        "url": "#",
+        "icon": "facebook"
+      },
+      {
+        "platform": "x",
+        "url": "#",
+        "icon": "x"
+      },
+      {
+        "platform": "pinterest",
+        "url": "#",
+        "icon": "pinterest"
+      },
+      {
+        "platform": "linkedin",
+        "url": "#",
+        "icon": "linkedin"
+      }
+    ]
+  },
+  "navbar": {
+    "logo": "/images/logo.png",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "About Us",
+        "url": "/about"
+      },
+      {
+        "label": "Service",
+        "url": "/service"
+      },
+      {
+        "label": "Portfolio",
+        "url": "/portfolio"
+      },
+      {
+        "label": "Package",
+        "url": "/package"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "cta": {
+      "label": "Get A Quote",
+      "url": "/quote"
+    }
+  },
+  "homeBanner": {
+    "subtitle": "Secure • Scalable • Reliable",
+    "title": {
+      "line1": "Empower Your",
+      "line2": "Business With Advanced",
+      "highlight": "Cloud Solutions"
+    },
+    "description": "Scalable, secure and high-performance cloud services to help your business grow faster and smarter.",
+    "buttons": [
+      {
+        "label": "Get a Quote",
+        "url": "/quote",
+        "primary": true
+      },
+      {
+        "label": "Our Services",
+        "url": "/service",
+        "primary": false
+      }
+    ],
+    "features": [
+      {
+        "title": "Scalable",
+        "subtitle": "Infrastructure",
+        "icon": "M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+      },
+      {
+        "title": "Advanced",
+        "subtitle": "Security",
+        "icon": "M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+      },
+      {
+        "title": "99.9%",
+        "subtitle": "Uptime",
+        "icon": "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+      },
+      {
+        "title": "24/7",
+        "subtitle": "Expert Support",
+        "icon": "M12 3c-4.97 0-9 4.03-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7c0-4.97-4.03-9-9-9z"
+      }
+    ],
+    "image": "/images/Home_banner.png"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Comprehensive",
+    "highlight": "Cloud Services",
+    "description": "End-to-end cloud solutions to help your business innovate, scale and stay secure in a rapidly evolving digital world.",
+    "items": [
+      {
+        "title": "Cloud Infrastructure",
+        "description": "Build a scalable, secure and high-performance cloud infrastructure tailored to your business needs.",
+        "image": "/images/services/service-1.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Migration",
+        "description": "Seamlessly migrate your applications, data and workloads to the cloud with minimal downtime.",
+        "image": "/images/services/service-2.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Security",
+        "description": "Advanced security solutions to protect your data, applications and infrastructure in the cloud.",
+        "image": "/images/services/service-3.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Managed Cloud Services",
+        "description": "Proactive monitoring, maintenance and management to ensure maximum performance and uptime.",
+        "image": "/images/services/service-4.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Networking",
+        "description": "Reliable, high-speed network solutions that securely connect all your cloud resources.",
+        "image": "/images/services/service-5.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Backup & Recovery",
+        "description": "Automated backups and fast disaster recovery to keep your business running without interruption.",
+        "image": "/images/services/service-6.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Consulting",
+        "description": "Expert guidance to plan, optimize and execute the right cloud strategy for your growth.",
+        "image": "/images/services/service-7.jpg",
+        "url": "/service"
+      },
+      {
+        "title": "Cloud Application Development",
+        "description": "Build modern, cloud-native applications that are fast, secure and built to scale.",
+        "image": "/images/services/service-8.jpg",
+        "url": "/service"
+      }
+    ],
+    "cta": { "label": "View All Services", "url": "/service" }
+  },
+  "whyChooseUs": {
+    "badge": "Why Choose Us",
+    "title": "Excellence in Managing Complex",
+    "highlight": "Digital Ecosystems",
+    "description": "We provide end-to-end IT solutions designed to streamline your business operations. From high-performance infrastructure to intelligent cloud solutions, we ensure your technology drives growth, not complexity.",
+    "mainImage": "/images/why-choose-us/why-main.jpg",
+    "sideImage": "/images/why-choose-us/why-team.jpg",
+    "badgeRingText": "SCALE • TRANSFORM • INNOVATE • SECURE • ",
+    "experience": { "value": "25+", "label": "Years of Industry Leadership" },
+    "features": [
+      {
+        "title": "Next-Gen Technology",
+        "description": "Leveraging modern cloud infrastructure and AI-driven solutions to keep your business ahead.",
+        "icon": "Cpu",
+        "color": "blue"
+      },
+      {
+        "title": "Expert Workforce",
+        "description": "Access to a skilled and certified team that seamlessly integrates with your business needs.",
+        "icon": "UsersRound",
+        "color": "green"
+      },
+      {
+        "title": "Global Security",
+        "description": "Robust security protocols ensuring your data, applications, and enterprise assets remain protected.",
+        "icon": "ShieldCheck",
+        "color": "blue"
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "Our Working Process in",
+    "highlight": "4 Steps",
+    "description": "A simple and streamlined approach to deliver secure, scalable and efficient cloud solutions for your business.",
+    "steps": [
+      {
+        "title": "Project Discussion",
+        "description": "We understand your business goals, requirements and challenges to create the right cloud strategy.",
+        "icon": "discussion"
+      },
+      {
+        "title": "Planning & Design",
+        "description": "Our experts design a customized cloud infrastructure tailored to your business needs.",
+        "icon": "planning"
+      },
+      {
+        "title": "Implementation",
+        "description": "We deploy and configure secure, high-performance cloud solutions with minimal downtime.",
+        "icon": "implementation"
+      },
+      {
+        "title": "Review & Support",
+        "description": "We test, optimize and provide ongoing support to ensure peak performance and business growth.",
+        "icon": "review"
+      }
+    ],
+    "stats": [
+      { "value": "250+", "label": "Happy Clients", "icon": "Smile" },
+      {
+        "value": "500+",
+        "label": "Cloud Servers Deployed",
+        "icon": "Briefcase"
+      },
+      { "value": "99.9%", "label": "Uptime Guarantee", "icon": "Clock" },
+      { "value": "24/7", "label": "Expert Support", "icon": "Headphones" }
+    ]
+  },
+  "footer": {
+    "description": "Innovating business solutions with cutting-edge IT services. We specialize in software development, cloud infrastructure, and pixel-perfect design to help companies scale globally.",
+    "companyLinks": [
+      { "label": "About Us", "url": "#" },
+      { "label": "Our Experts", "url": "#" },
+      { "label": "Latest News", "url": "#" },
+      { "label": "Privacy Policy", "url": "#" },
+      { "label": "Terms Conditions", "url": "#" }
+    ],
+    "solutionLinks": [
+      { "label": "UI/UX Design", "url": "#" },
+      { "label": "Web Development", "url": "#" },
+      { "label": "Network Security", "url": "#" },
+      { "label": "Cloud Computing", "url": "#" },
+      { "label": "Web Design", "url": "#" }
+    ]
+  },
+  "pageBanner": {
+    "defaultBg": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80"
+  },
+  "aboutUs": {
+    "tagline": "ABOUT US",
+    "title": "Innovative Software Solutions Tailored for ",
+    "highlight": "Your Business",
+    "description": "At CloudNex, we provide comprehensive IT services designed to address the unique technological needs of modern businesses. From scalable cloud infrastructure to bespoke software development, our solutions empower businesses to thrive in a digital-first world.",
+    "features": [
+      "Backup & Disaster Recovery",
+      "Cloud System Administration",
+      "24/7 Help Desk Support",
+      "Advanced IT Networking"
+    ],
+    "stats": [
+      {
+        "icon": "Users",
+        "iconBg": "bg-[#0070f3]",
+        "cardBg": "bg-[#f2f7fd]",
+        "value": "25 +",
+        "label": "Years Experience\nin IT Industry"
+      },
+      {
+        "icon": "FileText",
+        "iconBg": "bg-[#3cb024]",
+        "cardBg": "bg-[#f2f9f1]",
+        "value": "500 +",
+        "label": "Projects\nDelivered"
+      },
+      {
+        "icon": "Award",
+        "iconBg": "bg-[#0070f3]",
+        "cardBg": "bg-[#f2f7fd]",
+        "value": "5K+",
+        "label": "Happy\nClients"
+      }
+    ],
+    "cta": {
+      "text": "Read More",
+      "url": "/about"
+    },
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+  },
+  "servicesPage": {
+    "header": {
+      "tagline": "OUR SERVICES",
+      "title": "Comprehensive ",
+      "highlight": "Cloud Services",
+      "description": "End-to-end cloud solutions to help your business innovate, scale and stay secure in a rapidly evolving digital world."
+    },
+    "services": [
+      {
+        "id": "01",
+        "icon": "/images/services/service-1.jpg",
+        "title": "Cloud Infrastructure",
+        "description": "Build a scalable, secure and high-performance cloud infrastructure tailored to your business needs.",
+        "link": "/service/cloud-infrastructure"
+      },
+      {
+        "id": "02",
+        "icon": "/images/services/service-2.jpg",
+        "title": "Cloud Migration",
+        "description": "Seamlessly migrate your applications, data and workloads to the cloud with minimal downtime.",
+        "link": "/service/cloud-migration"
+      },
+      {
+        "id": "03",
+        "icon": "/images/services/service-3.jpg",
+        "title": "Cloud Security",
+        "description": "Advanced security solutions to protect your data, applications and infrastructure in the cloud.",
+        "link": "/service/cloud-security"
+      },
+      {
+        "id": "04",
+        "icon": "/images/services/service-4.jpg",
+        "title": "Managed Cloud Services",
+        "description": "Proactive monitoring, maintenance and management to ensure maximum performance and uptime.",
+        "link": "/service/managed-cloud-services"
+      },
+      {
+        "id": "05",
+        "icon": "/images/services/service-5.jpg",
+        "title": "Cloud Networking",
+        "description": "Reliable and high-speed networking solutions for secure and seamless cloud connectivity.",
+        "link": "/service/cloud-networking"
+      },
+      {
+        "id": "06",
+        "icon": "/images/services/service-6.jpg",
+        "title": "Cloud Backup & Recovery",
+        "description": "Keep your critical data safe with automated backup and fast disaster recovery solutions.",
+        "link": "/service/cloud-backup-and-recovery"
+      },
+      {
+        "id": "07",
+        "icon": "/images/services/service-7.jpg",
+        "title": "Cloud Consulting",
+        "description": "Expert guidance to design, implement and optimize cloud strategies for business growth.",
+        "link": "/service/cloud-consulting"
+      },
+      {
+        "id": "08",
+        "icon": "/images/services/service-8.jpg",
+        "title": "Cloud Application Development",
+        "description": "Custom cloud-based applications to streamline operations and drive innovation.",
+        "link": "/service/cloud-application-development"
+      }
+    ],
+    "ctaBanner": {
+      "icon": "FileSearch",
+      "title": "Looking for the Best ",
+      "highlight": "IT Business Solutions?",
+      "description": "We're here to understand your requirements and provide the right IT solutions for your business growth.",
+      "button": {
+        "text": "Get a Quote",
+        "url": "/contact"
+      }
+    }
+  },
+  "serviceDetails": {
+    "title": "Services Details",
+    "overview": {
+      "tagline": "OVERVIEW",
+      "title": "Custom Web Development for ",
+      "highlight": "Modern Businesses",
+      "description": [
+        "At CloudNex, we design and develop feature-rich, responsive and high-performance websites tailored to your business goals. Our web development solutions combine modern technologies with user-centric design to deliver seamless digital experiences.",
+        "Whether you need a corporate website, a business portal, or a complex web application, we build secure, scalable and future-ready solutions that help you stand out in the digital world."
+      ],
+      "features": [
+        {
+          "icon": "Smartphone",
+          "title": "Responsive & Mobile-First Design"
+        },
+        {
+          "icon": "Zap",
+          "title": "Fast & Secure Performance"
+        },
+        {
+          "icon": "Search",
+          "title": "SEO Friendly Development"
+        },
+        {
+          "icon": "Layers",
+          "title": "Scalable & Flexible Solution"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+    },
+    "approach": {
+      "tagline": "OUR APPROACH",
+      "title": "Strategic & User-Centric Development Process",
+      "description": "We follow a structured development process to ensure your website is visually appealing, technically sound and aligned with your business objectives. From planning and design to development and testing, we focus on delivering quality at every stage.",
+      "button": {
+        "text": "Get a Quote",
+        "url": "/contact"
+      },
+      "videoThumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+      "videoUrl": "#"
+    },
+    "benefits": {
+      "tagline": "KEY BENEFITS",
+      "title": "Why Choose ",
+      "highlight": "Our Web Development Services?",
+      "items": [
+        {
+          "icon": "Rocket",
+          "iconBg": "bg-blue-100",
+          "iconColor": "text-blue-600",
+          "title": "Modern Technologies",
+          "description": "We use the latest frameworks and tools to build future-ready web solutions."
+        },
+        {
+          "icon": "Users",
+          "iconBg": "bg-green-100",
+          "iconColor": "text-green-600",
+          "title": "User-Focused Design",
+          "description": "Clean, engaging and intuitive designs for better user experience."
+        },
+        {
+          "icon": "ShieldCheck",
+          "iconBg": "bg-blue-100",
+          "iconColor": "text-blue-600",
+          "title": "Security & Reliability",
+          "description": "Robust security measures to keep your data and users protected."
+        },
+        {
+          "icon": "TrendingUp",
+          "iconBg": "bg-green-100",
+          "iconColor": "text-green-600",
+          "title": "Business Growth",
+          "description": "Web solutions designed to generate leads, improve engagement and drive growth."
+        }
+      ]
+    }
+  },
+  "portfolioPage": {
+    "banner": {
+      "title": "Portfolio",
+      "breadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Portfolio", "url": "/portfolio" }
+      ]
+    },
+    "projects": {
+      "tagline": "OUR PORTFOLIO",
+      "title": "Our Recent ",
+      "highlight": "Projects",
+      "description": "Explore our successful cloud solutions and IT infrastructure projects. We've helped businesses across industries achieve greater efficiency, security, and growth.",
+      "filters": [
+        "All",
+        "Cloud Migration",
+        "Data Center",
+        "Cyber Security",
+        "Managed Services",
+        "IT Solutions"
+      ],
+      "filterIcons": {
+        "Cloud Migration": "Cloud",
+        "Data Center": "Database",
+        "Cyber Security": "ShieldCheck",
+        "Managed Services": "Users",
+        "IT Solutions": "LayoutGrid"
+      },
+      "viewDetailsLabel": "View Details",
+      "items": [
+        {
+          "category": "Cloud Migration",
+          "title": "Cloud Migration for Global Enterprises",
+          "description": "Helped a leading enterprise migrate its legacy infrastructure to the cloud, improving scalability and performance by 60%.",
+          "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+          "icon": "Cloud",
+          "link": "/portfolio/cloud-migration-global-enterprises"
+        },
+        {
+          "category": "Data Center",
+          "title": "Data Center Infrastructure Setup",
+          "description": "Designed and deployed a high-performance data center solution with 99.99% uptime for a fintech company.",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+          "icon": "Database",
+          "link": "/portfolio/data-center-infrastructure-setup"
+        },
+        {
+          "category": "Cyber Security",
+          "title": "Cyber Security Implementation",
+          "description": "Implemented advanced security protocols and monitoring systems to protect sensitive data and ensure compliance.",
+          "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80",
+          "icon": "ShieldCheck",
+          "link": "/portfolio/cyber-security-implementation"
+        },
+        {
+          "category": "Managed Services",
+          "title": "Managed IT Services for Healthcare",
+          "description": "Provided 24/7 monitoring and support for a healthcare provider, ensuring uninterrupted operations and better patient care.",
+          "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80",
+          "icon": "Users",
+          "link": "/portfolio/managed-it-services-healthcare"
+        },
+        {
+          "category": "IT Solutions",
+          "title": "Custom IT Solutions for E-commerce",
+          "description": "Built a scalable cloud platform to handle high traffic and improve website load speed by 70%.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+          "icon": "LayoutGrid",
+          "link": "/portfolio/custom-it-solutions-ecommerce"
+        },
+        {
+          "category": "Cloud Migration",
+          "title": "Hybrid Cloud Architecture",
+          "description": "Implemented a hybrid cloud solution to optimize costs while maintaining security and flexibility.",
+          "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+          "icon": "Cloud",
+          "link": "/portfolio/hybrid-cloud-architecture"
+        }
+      ]
+    },
+    "process": {
+      "tagline": "HOW IT WORKS",
+      "title": "Our Working Process in ",
+      "highlight": "4 Steps",
+      "description": "A simple and streamlined approach to deliver secure, scalable and efficient cloud solutions for your business.",
+      "steps": [
+        {
+          "id": "01",
+          "icon": "MessageSquare",
+          "badgeColor": "bg-blue-600",
+          "title": "Project Discussion",
+          "description": "We understand your business goals, requirements and challenges to create the right cloud strategy."
+        },
+        {
+          "id": "02",
+          "icon": "MonitorCheck",
+          "badgeColor": "bg-[#3cb024]",
+          "title": "Planning & Design",
+          "description": "Our experts design a customized cloud infrastructure tailored to your business needs."
+        },
+        {
+          "id": "03",
+          "icon": "CloudUpload",
+          "badgeColor": "bg-blue-600",
+          "title": "Implementation",
+          "description": "We deploy and configure secure, high-performance cloud solutions with minimal downtime."
+        },
+        {
+          "id": "04",
+          "icon": "FileCheck",
+          "badgeColor": "bg-[#3cb024]",
+          "title": "Review & Support",
+          "description": "We test, optimize and provide ongoing support to ensure peak performance and business growth."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "icon": "Users",
+        "value": "250+",
+        "label": "Happy Clients"
+      },
+      {
+        "icon": "Cloud",
+        "value": "500+",
+        "label": "Cloud Servers Deployed"
+      },
+      {
+        "icon": "ShieldCheck",
+        "value": "99.9%",
+        "label": "Uptime Guarantee"
+      },
+      {
+        "icon": "Headset",
+        "value": "24/7",
+        "label": "Expert Support"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "title": "Portfolio",
+    "overview": {
+      "tagline": "Project Overview",
+      "title": "A Scalable Cloud Migration \nSolution for a ",
+      "highlight": "Global Business",
+      "description": [
+        "We helped a leading enterprise migrate its legacy infrastructure to the cloud, enabling higher scalability, improved performance and reduced operational costs. Our team planned and executed a phased migration strategy with minimal downtime, ensuring a smooth transition and enhanced business continuity.",
+        "The solution was designed to meet their growing data needs, improve security, and provide a flexible infrastructure for future expansion."
+      ],
+      "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80"
+    },
+    "challenges": {
+      "tagline": "Project Challenges",
+      "description": "The client was facing performance issues with their on-premise infrastructure, which was difficult to scale and maintain. High operational costs, frequent downtime, and limited data security were major concerns. They needed a future-ready solution to support their global operations and growing user base.",
+      "list": [
+        "Legacy infrastructure with limited scalability",
+        "High maintenance and operational costs",
+        "Performance issues and frequent downtime",
+        "Security and compliance concerns",
+        "Need for a future-ready and flexible infrastructure"
+      ]
+    },
+    "solution": {
+      "title": "Our Solution",
+      "description": "We developed a customized cloud migration strategy, implemented a hybrid cloud architecture, and ensured a seamless transition with minimal downtime. Our team also provided ongoing monitoring and optimization for long-term success.",
+      "list": [
+        "Seamless and secure cloud migration",
+        "High availability and improved performance",
+        "Reduced operational costs by 60%",
+        "Enhanced security and compliance",
+        "Scalable infrastructure for future growth"
+      ]
+    },
+    "information": {
+      "title": "Project Information",
+      "details": [
+        { "icon": "User", "label": "Client :", "value": "James Mary" },
+        {
+          "icon": "LayoutGrid",
+          "label": "Category :",
+          "value": "Cloud Migration"
+        },
+        {
+          "icon": "CalendarDays",
+          "label": "Start Date :",
+          "value": "05 Jan, 2025"
+        },
+        {
+          "icon": "CalendarCheck",
+          "label": "End Date :",
+          "value": "04 Jul, 2025"
+        },
+        { "icon": "Coins", "label": "Budget :", "value": "$7,854.66" },
+        { "icon": "MapPin", "label": "Location :", "value": "New York, USA" }
+      ],
+      "button": {
+        "text": "Get a Similar Solution",
+        "url": "/contact"
+      },
+      "shareTitle": "Share This Project"
+    }
+  },
+  "contactPage": {
+    "banner": {
+      "title": "Contact Us",
+      "bgImage": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1920&q=80",
+      "breadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Contact Us", "url": "/contact" }
+      ]
+    },
+    "hero": {
+      "badge": "Contact Us",
+      "title": "Let's Connect With",
+      "highlight": "Cloud Experts",
+      "description": "Have a question or need a customized cloud solution? Our team is here to help. Get in touch with us today and let's discuss how CloudNEX can support your business growth.",
+      "image": "/images/contact/contact-support.jpg",
+      "features": [
+        {
+          "title": "Quick Response",
+          "description": "We respond within 24 hours",
+          "icon": "Zap",
+          "color": "blue"
+        },
+        {
+          "title": "Expert Consultation",
+          "description": "Get advice from cloud experts",
+          "icon": "UsersRound",
+          "color": "green"
+        },
+        {
+          "title": "Custom Solutions",
+          "description": "Tailored to your business needs",
+          "icon": "Settings",
+          "color": "green"
+        },
+        {
+          "title": "Trusted Support",
+          "description": "Reliable and ongoing support",
+          "icon": "ShieldCheck",
+          "color": "blue"
+        }
+      ]
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "description": "Fill out the form below and our team will get back to you shortly.",
+      "fields": {
+        "name": "Your Name *",
+        "email": "Your Email *",
+        "phone": "Phone Number *",
+        "subject": "Subject *",
+        "message": "Your Message *"
+      },
+      "button": "Send Message",
+      "successMessage": "Thank you! Your message has been sent. Our team will contact you shortly."
+    },
+    "getInTouch": {
+      "title": "Get In",
+      "highlight": "Touch",
+      "description": "You can also reach us directly through the details below or visit our office.",
+      "items": [
+        {
+          "title": "Our Office",
+          "lines": [
+            "123 Tech Park, Sector 62,",
+            "Noida, Uttar Pradesh, India - 201309"
+          ],
+          "icon": "MapPin",
+          "color": "blue"
+        },
+        {
+          "title": "Call Us",
+          "lines": ["+91 9876543210", "Mon - Sat, 9:00 AM to 6:00 PM"],
+          "icon": "Phone",
+          "color": "green"
+        },
+        {
+          "title": "Email Us",
+          "lines": ["info@cloudnex.com", "We reply within 24 hours"],
+          "icon": "Mail",
+          "color": "blue"
+        }
+      ],
+      "mapEmbedUrl": "https://maps.google.com/maps?q=Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh&z=15&output=embed"
+    }
+  },
+  "packagePage": {
+    "banner": {
+      "title": "Packages",
+      "breadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Packages", "url": "/package" }
+      ]
+    },
+    "badge": "Pricing Plan",
+    "title": "Our Awesome & Best",
+    "titleLine2": "Pricing",
+    "highlight": "Plan",
+    "description": "Choose the perfect plan for your business needs. Get the best features, security and performance at an affordable price.",
+    "billing": {
+      "monthly": { "label": "Monthly", "suffix": "/month" },
+      "yearly": { "label": "Yearly", "suffix": "/year" }
+    },
+    "subtitle": "What you will get in this plan",
+    "guarantee": "30 Day Money-Back Guarantee",
+    "popularLabel": "Most Popular",
+    "plans": [
+      {
+        "name": "Bronze",
+        "medal": "bronze",
+        "popular": false,
+        "price": { "monthly": "$29.99", "yearly": "$299.99" },
+        "features": [
+          "Anti-Malware & Browsing Protection",
+          "Ad And Tracker Blocker",
+          "Secure, High-Speed VPN",
+          "Password Manager & Data Breach",
+          "1 TB Of Encrypted Cloud Storage"
+        ],
+        "button": { "text": "Get Start", "url": "/contact" }
+      },
+      {
+        "name": "Silver",
+        "medal": "silver",
+        "popular": true,
+        "price": { "monthly": "$29.99", "yearly": "$299.99" },
+        "features": [
+          "Anti-Malware & Browsing Protection",
+          "Ad And Tracker Blocker",
+          "Secure, High-Speed VPN",
+          "Password Manager & Data Breach",
+          "1 TB Of Encrypted Cloud Storage"
+        ],
+        "button": { "text": "Get Start", "url": "/contact" }
+      },
+      {
+        "name": "Gold",
+        "medal": "gold",
+        "popular": false,
+        "price": { "monthly": "$29.99", "yearly": "$299.99" },
+        "features": [
+          "Anti-Malware & Browsing Protection",
+          "Ad And Tracker Blocker",
+          "Secure, High-Speed VPN",
+          "Password Manager & Data Breach",
+          "1 TB Of Encrypted Cloud Storage"
+        ],
+        "button": { "text": "Get Start", "url": "/contact" }
+      }
+    ]
+  },
+  "blog": {
+    "listBanner": {
+      "title": "Our Blog",
+      "breadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Blog", "url": "/blog" }
+      ]
+    },
+    "section": {
+      "badge": "Our Blog",
+      "title": "Latest Insights &",
+      "highlight": "News",
+      "description": "Stay updated with the latest trends, insights and expert advice on cloud solutions, IT infrastructure, cyber security and digital transformation.",
+      "readMore": "Read More",
+      "viewAll": { "text": "View All Blogs", "url": "/blog" }
+    },
+    "details": {
+      "banner": {
+        "title": "Blog Details",
+        "breadcrumbs": [
+          { "label": "Home", "url": "/" },
+          { "label": "Our Blogs", "url": "/blog" },
+          { "label": "Blog Details", "url": "#" }
+        ]
+      },
+      "miniBreadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Blog", "url": "/blog" }
+      ],
+      "commentsLabel": "Comments",
+      "readTimeLabel": "Min Read",
+      "authorPrefix": "By",
+      "categoriesTitle": "Categories",
+      "categories": [
+        { "name": "Cloud Computing", "count": 12 },
+        { "name": "Data Security", "count": 8 },
+        { "name": "IT Infrastructure", "count": 10 },
+        { "name": "Managed Services", "count": 17 },
+        { "name": "Cloud Migration", "count": 9 },
+        { "name": "Business Growth", "count": 5 }
+      ],
+      "recentPostsTitle": "Recent Posts",
+      "recentPostSlugs": [
+        "top-5-cloud-security-best-practices-2025",
+        "how-to-choose-right-cloud-provider",
+        "role-of-ai-in-cloud-computing",
+        "how-cloud-solutions-transform-business-2025"
+      ],
+      "ctaCard": {
+        "eyebrow": "Need Expert Advice?",
+        "title": "Let's Discuss Your",
+        "highlight": "Cloud Project",
+        "description": "Get in touch with our cloud experts and find the best solution for your business.",
+        "button": { "text": "Contact Us", "url": "/contact" }
+      }
+    },
+    "posts": [
+      {
+        "slug": "cloud-infrastructure-scale-faster",
+        "title": "How Cloud Infrastructure Helps Businesses Scale Faster",
+        "highlight": "Scale Faster",
+        "tag": "Cloud Infrastructure",
+        "category": "IT Infrastructure",
+        "date": "September 15, 2024",
+        "readTime": 6,
+        "comments": 3,
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "description": "Discover how cloud infrastructure enables businesses to scale quickly, reduce costs and improve operational efficiency in today's digital world.",
+        "author": {
+          "name": "Rahul Sharma",
+          "role": "Tech Expert",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "Growth is exciting, but it puts heavy pressure on IT. Traditional on-premise servers take weeks to procure and configure, while customer demand can change overnight. Cloud infrastructure removes that bottleneck by letting businesses add or remove capacity in minutes.",
+          "sections": [
+            {
+              "heading": "What Is Cloud Infrastructure?",
+              "body": "Cloud infrastructure is the collection of compute, storage, networking and virtualization resources delivered over the internet by a cloud provider. Instead of buying hardware, businesses rent exactly what they need and pay only for what they use."
+            }
+          ],
+          "benefitsTitle": "Why It Helps You Scale",
+          "benefits": [
+            {
+              "title": "Elastic Capacity",
+              "description": "Automatically add resources during traffic spikes and release them after.",
+              "icon": "ChartColumnIncreasing",
+              "color": "green"
+            },
+            {
+              "title": "Lower Upfront Cost",
+              "description": "No large hardware purchases, just predictable monthly spend.",
+              "icon": "Settings",
+              "color": "blue"
+            },
+            {
+              "title": "Global Reach",
+              "description": "Launch in new regions close to your customers in minutes.",
+              "icon": "Globe",
+              "color": "blue"
+            },
+            {
+              "title": "Faster Launches",
+              "description": "Spin up new environments instantly for testing and releases.",
+              "icon": "Zap",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Ready to Scale Smarter?",
+            "body": "Cloud infrastructure turns IT from a bottleneck into a growth engine. With the right architecture, your systems grow as fast as your business does."
+          }
+        }
+      },
+      {
+        "slug": "cyber-security-best-practices",
+        "title": "Top Cyber Security Best Practices for Modern Businesses",
+        "highlight": "Modern Businesses",
+        "tag": "Cyber Security",
+        "category": "Data Security",
+        "date": "September 10, 2024",
+        "readTime": 7,
+        "comments": 5,
+        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        "description": "Learn essential cyber security best practices to protect your business data, prevent threats and ensure long-term digital resilience.",
+        "author": {
+          "name": "Priya Verma",
+          "role": "Security Consultant",
+          "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "Cyber attacks are no longer a problem only for large enterprises. Small and mid-sized businesses are now frequent targets because attackers expect weaker defenses. A few disciplined practices can dramatically reduce your risk.",
+          "sections": [
+            {
+              "heading": "Why Security Must Be a Priority",
+              "body": "A single breach can lead to data loss, downtime, regulatory penalties and lasting damage to customer trust. Building security into everyday operations is far cheaper than recovering from an incident."
+            }
+          ],
+          "benefitsTitle": "Essential Best Practices",
+          "benefits": [
+            {
+              "title": "Multi-Factor Authentication",
+              "description": "Add a second verification step to every critical account.",
+              "icon": "Lock",
+              "color": "green"
+            },
+            {
+              "title": "Regular Patching",
+              "description": "Keep operating systems and software updated against known flaws.",
+              "icon": "Settings",
+              "color": "blue"
+            },
+            {
+              "title": "Data Encryption",
+              "description": "Encrypt sensitive data both at rest and in transit.",
+              "icon": "ShieldCheck",
+              "color": "blue"
+            },
+            {
+              "title": "Employee Training",
+              "description": "Teach teams to recognize phishing and social engineering.",
+              "icon": "Users",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Build a Security-First Culture",
+            "body": "Security is an ongoing process, not a one-time project. Combine the right tools with trained people and regular reviews to stay ahead of evolving threats."
+          }
+        }
+      },
+      {
+        "slug": "future-of-it-management-cloud",
+        "title": "The Future of IT Management with Cloud Solutions",
+        "highlight": "Cloud Solutions",
+        "tag": "IT Management",
+        "category": "Managed Services",
+        "date": "September 5, 2024",
+        "readTime": 5,
+        "comments": 2,
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        "description": "Explore how cloud solutions are transforming IT management, improving flexibility and driving business growth across industries.",
+        "author": {
+          "name": "Amit Patel",
+          "role": "Cloud Architect",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "IT teams used to spend most of their time keeping servers running. Cloud platforms and automation are shifting that focus toward innovation, strategy and better user experiences.",
+          "sections": [
+            {
+              "heading": "From Maintenance to Strategy",
+              "body": "With managed cloud services handling patching, backups and monitoring, IT leaders can focus on projects that directly support business goals."
+            }
+          ],
+          "benefitsTitle": "What's Changing",
+          "benefits": [
+            {
+              "title": "Automation First",
+              "description": "Routine tasks are scripted and run without manual effort.",
+              "icon": "Cpu",
+              "color": "green"
+            },
+            {
+              "title": "Proactive Monitoring",
+              "description": "Issues are detected and fixed before users notice.",
+              "icon": "Server",
+              "color": "blue"
+            },
+            {
+              "title": "Remote Management",
+              "description": "Manage infrastructure securely from anywhere.",
+              "icon": "Cloud",
+              "color": "blue"
+            },
+            {
+              "title": "Data-Driven Decisions",
+              "description": "Real-time insights guide capacity and cost planning.",
+              "icon": "ChartColumnIncreasing",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Preparing for What's Next",
+            "body": "Organizations that embrace cloud-based IT management today will be better positioned to adopt AI, edge computing and other emerging technologies tomorrow."
+          }
+        }
+      },
+      {
+        "slug": "how-cloud-solutions-transform-business-2025",
+        "title": "How Cloud Solutions Can Transform Your Business in 2025",
+        "highlight": "Your Business in 2025",
+        "tag": "Cloud Technology",
+        "category": "Cloud Computing",
+        "date": "January 25, 2025",
+        "readTime": 8,
+        "comments": 0,
+        "image": "/images/blog/cloud-transform-2025.jpg",
+        "description": "Discover how cloud solutions improve efficiency, reduce costs and keep your business ahead of the competition in 2025.",
+        "author": {
+          "name": "Admin",
+          "role": "CloudNex Team",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "In today's fast-paced digital world, businesses are constantly looking for ways to improve efficiency, reduce costs, and stay ahead of the competition. Cloud solutions have become a game-changer, offering scalability, flexibility, and enhanced security for organizations of all sizes. In 2025, the adoption of cloud technology is expected to grow even further, making it an essential part of modern business strategy.",
+          "sections": [
+            {
+              "heading": "What Are Cloud Solutions?",
+              "body": "Cloud solutions refer to a range of services, including cloud storage, computing power, databases, networking, and software, all delivered over the Internet. Instead of relying on physical servers or local infrastructure, businesses can access these resources on-demand from a cloud provider."
+            }
+          ],
+          "benefitsTitle": "Key Benefits of Cloud Solutions",
+          "benefits": [
+            {
+              "title": "Scalability",
+              "description": "Easily scale resources up or down based on your business needs.",
+              "icon": "ChartColumnIncreasing",
+              "color": "green"
+            },
+            {
+              "title": "Cost Efficiency",
+              "description": "Reduce hardware costs and maintenance expenses.",
+              "icon": "Settings",
+              "color": "blue"
+            },
+            {
+              "title": "Enhanced Security",
+              "description": "Advanced security features protect your data and applications.",
+              "icon": "ShieldCheck",
+              "color": "blue"
+            },
+            {
+              "title": "Improved Collaboration",
+              "description": "Enable teams to work from anywhere with real-time access.",
+              "icon": "Cloud",
+              "color": "blue"
+            },
+            {
+              "title": "Business Continuity",
+              "description": "Ensure minimal downtime with reliable backup and disaster recovery.",
+              "icon": "Globe",
+              "color": "blue"
+            },
+            {
+              "title": "Innovation & Growth",
+              "description": "Focus on innovation with the latest cloud technologies.",
+              "icon": "Zap",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Why 2025 is the Year for Cloud Adoption?",
+            "body": "With advancements in AI, machine learning, and edge computing, cloud solutions are more powerful and accessible than ever. Businesses that adopt cloud technology in 2025 can expect greater agility, improved customer experiences, and a stronger competitive advantage in the digital economy."
+          }
+        }
+      },
+      {
+        "slug": "top-5-cloud-security-best-practices-2025",
+        "title": "Top 5 Cloud Security Best Practices for 2025",
+        "highlight": "for 2025",
+        "tag": "Cloud Security",
+        "category": "Data Security",
+        "date": "January 18, 2025",
+        "readTime": 6,
+        "comments": 4,
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+        "description": "Protect your cloud workloads with five proven security practices every business should follow in 2025.",
+        "author": {
+          "name": "Priya Verma",
+          "role": "Security Consultant",
+          "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "Moving to the cloud brings speed and flexibility, but it also changes how security must be handled. Most cloud breaches come from misconfiguration rather than sophisticated attacks.",
+          "sections": [
+            {
+              "heading": "The Shared Responsibility Model",
+              "body": "Cloud providers secure the underlying infrastructure, while you are responsible for securing your data, identities and configurations. Understanding this split is the first step to a secure cloud."
+            }
+          ],
+          "benefitsTitle": "5 Practices to Follow",
+          "benefits": [
+            {
+              "title": "Least-Privilege Access",
+              "description": "Give users only the permissions they truly need.",
+              "icon": "Lock",
+              "color": "green"
+            },
+            {
+              "title": "Encrypt Everything",
+              "description": "Use encryption for stored data and all network traffic.",
+              "icon": "ShieldCheck",
+              "color": "blue"
+            },
+            {
+              "title": "Continuous Monitoring",
+              "description": "Track activity and alert on unusual behavior in real time.",
+              "icon": "Server",
+              "color": "blue"
+            },
+            {
+              "title": "Configuration Audits",
+              "description": "Regularly scan for open storage and weak settings.",
+              "icon": "Settings",
+              "color": "blue"
+            },
+            {
+              "title": "Backup & Recovery",
+              "description": "Keep tested, isolated backups for fast recovery.",
+              "icon": "Cloud",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Stay Secure as You Grow",
+            "body": "Make these practices part of your standard cloud operations so security scales automatically with every new workload."
+          }
+        }
+      },
+      {
+        "slug": "how-to-choose-right-cloud-provider",
+        "title": "How to Choose the Right Cloud Provider",
+        "highlight": "Cloud Provider",
+        "tag": "Cloud Strategy",
+        "category": "Cloud Migration",
+        "date": "January 12, 2025",
+        "readTime": 5,
+        "comments": 1,
+        "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80",
+        "description": "A practical guide to comparing cloud providers on cost, performance, security and support.",
+        "author": {
+          "name": "Amit Patel",
+          "role": "Cloud Architect",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+        },
+        "content": {
+          "intro": "AWS, Azure, Google Cloud and many specialized providers all promise reliability and performance. Choosing the right one depends on your workloads, budget, compliance needs and team skills.",
+          "sections": [
+            {
+              "heading": "Start With Your Requirements",
+              "body": "List the applications you plan to move, their performance needs, data residency rules and expected growth. This makes provider comparisons objective instead of brand-driven."
+            }
+          ],
+          "benefitsTitle": "Key Factors to Compare",
+          "benefits": [
+            {
+              "title": "Pricing Model",
+              "description": "Compare on-demand, reserved and data transfer costs.",
+              "icon": "ChartColumnIncreasing",
+              "color": "green"
+            },
+            {
+              "title": "Security & Compliance",
+              "description": "Check certifications relevant to your industry.",
+              "icon": "ShieldCheck",
+              "color": "blue"
+            },
+            {
+              "title": "Global Regions",
+              "description": "Ensure data centers are close to your users.",
+              "icon": "Globe",
+              "color": "blue"
+            },
+            {
+              "title": "Support Quality",
+              "description": "Evaluate response times and available support plans.",
+              "icon": "Users",
+              "color": "blue"
+            }
+          ],
+          "conclusion": {
+            "heading": "Get Expert Guidance",
+            "body": "An experienced cloud partner can benchmark providers against your needs and help you avoid costly lock-in."
+          }
+        }
+      }
+    ]
+  },
+  "quotePage": {
+    "banner": {
+      "title": "Get A Quote",
+      "breadcrumbs": [
+        { "label": "Home", "url": "/" },
+        { "label": "Get A Quote", "url": "/quote" }
+      ]
+    },
+    "intro": {
+      "badge": "Free Quote",
+      "title": "Get a Free Quote for Your",
+      "highlight": "Cloud Project",
+      "description": "Tell us about your business and goals. Our cloud experts will review your requirements and send you a detailed, no-obligation proposal tailored to your needs.",
+      "benefits": [
+        "Free consultation with certified cloud experts",
+        "Transparent pricing with no hidden costs",
+        "Customized solution for your business needs",
+        "Response within 24 business hours"
+      ]
+    },
+    "nextSteps": {
+      "title": "What Happens Next?",
+      "steps": [
+        { "title": "Submit Your Request", "description": "Share your project details using the form.", "icon": "Send" },
+        { "title": "Expert Review", "description": "Our team analyzes your requirements.", "icon": "SearchCheck" },
+        { "title": "Get Your Proposal", "description": "Receive a detailed quote and roadmap.", "icon": "FileCheck" }
+      ]
+    },
+    "contactCard": {
+      "title": "Prefer to Talk?",
+      "description": "Call or email us and our team will help you right away.",
+      "phone": "+91 9876543210",
+      "email": "info@cloudnex.com"
+    },
+    "form": {
+      "title": "Request a",
+      "highlight": "Quote",
+      "description": "Fill in the details below and we'll get back to you with a customized quote.",
+      "fields": {
+        "name": "Full Name *",
+        "email": "Email Address *",
+        "phone": "Phone Number *",
+        "company": "Company Name",
+        "service": "Select Service *",
+        "budget": "Estimated Budget *",
+        "timeline": "Project Timeline",
+        "message": "Tell us about your project *"
+      },
+      "otherServiceLabel": "Other",
+      "budgetOptions": ["Under $1,000", "$1,000 - $5,000", "$5,000 - $10,000", "$10,000 - $25,000", "$25,000+"],
+      "timelineOptions": ["As soon as possible", "Within 1 month", "1 - 3 months", "3 - 6 months", "Just exploring"],
+      "consent": "I agree to be contacted by CloudNex regarding my quote request.",
+      "button": "Get My Free Quote",
+      "successTitle": "Quote Request Received!",
+      "successMessage": "Thank you for reaching out. Our cloud experts will review your requirements and contact you within 24 business hours.",
+      "resetLabel": "Submit Another Request"
+    }
+  },
+  "thankYouPage": {
+    "title": "Thank ",
+    "highlight": "You!",
+    "subtitle": "Your Message Has Been Sent Successfully",
+    "description": "We appreciate you reaching out to CloudNEX. Our team has received your message and will get back to you shortly.",
+    "button": {
+      "text": "Back to Home",
+      "url": "/"
+    },
+    "features": [
+      {
+        "title": "Message Received",
+        "description": "Your inquiry has been successfully submitted.",
+        "icon": "Mail"
+      },
+      {
+        "title": "Quick Response",
+        "description": "Our team will get back to you within 24 hours.",
+        "icon": "Clock"
+      },
+      {
+        "title": "Expert Support",
+        "description": "Get advice from our cloud experts.",
+        "icon": "Users"
+      },
+      {
+        "title": "Tailored Solutions",
+        "description": "We'll help you find the right solution for your needs.",
+        "icon": "Settings"
+      }
+    ]
+  }
+}
