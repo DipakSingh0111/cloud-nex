@@ -50,29 +50,29 @@
                 "alt": "CloudNex Logo"
               },
               "contact": {
-                "address": "123 Tech Park, Sector 62, Noida, Uttar Pradesh, India - 201309",
-                "phone": "+91 9876543210",
+                "address": "123 Tech Avenue, Suite 400, San Francisco, CA, USA - 94107",
+                "phone": "+1 415 555 1234",
                 "email": "info@cloudnex.com"
               },
               "socials": [
                 {
                   "name": "Facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "facebook"
                 },
                 {
                   "name": "X",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "x"
                 },
                 {
                   "name": "Pinterest",
-                  "url": "#",
+                  "url": "https://pinterest.com",
                   "icon": "pinterest"
                 },
                 {
                   "name": "LinkedIn",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "linkedin"
                 }
               ]
@@ -82,9 +82,9 @@
         "Topbar": {
           "variants": {
             "CloudNexTopbar1": {
-              "phone": "+91 00000 00000",
+              "phone": "+1 415 555 1234",
               "email": "info@xyz.com",
-              "address": "123, Sector 62, Noida, UP, India",
+              "address": "123 Tech Ave, San Francisco, CA, USA",
               "socials": [
                 {
                   "platform": "facebook",
@@ -1495,8 +1495,8 @@
                   {
                     "title": "Our Office",
                     "lines": [
-                      "123 Tech Park, Sector 62,",
-                      "Noida, Uttar Pradesh, India - 201309"
+                      "123 Tech Avenue, Suite 400,",
+                      "San Francisco, CA, USA - 94107"
                     ],
                     "icon": "MapPin",
                     "color": "blue"
@@ -1504,7 +1504,7 @@
                   {
                     "title": "Call Us",
                     "lines": [
-                      "+91 9876543210",
+                      "+1 415 555 1234",
                       "Mon - Sat, 9:00 AM to 6:00 PM"
                     ],
                     "icon": "Phone",
@@ -1517,7 +1517,7 @@
                     "color": "blue"
                   }
                 ],
-                "mapEmbedUrl": "https://maps.google.com/maps?q=Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh&z=15&output=embed"
+                "mapEmbedUrl": "https://maps.google.com/maps?q=San%20Francisco%2C%20CA%2C%20USA&z=15&output=embed"
               }
             }
           }
@@ -1562,7 +1562,7 @@
               "contactCard": {
                 "title": "Prefer to Talk?",
                 "description": "Call or email us and our team will help you right away.",
-                "phone": "+91 9876543210",
+                "phone": "+1 415 555 1234",
                 "email": "info@cloudnex.com"
               },
               "form": {
@@ -1650,45 +1650,33 @@
               "companyLinks": [
                 {
                   "label": "About Us",
-                  "href": "#"
+                  "href": "/about"
                 },
                 {
-                  "label": "Our Experts",
-                  "href": "#"
+                  "label": "Portfolio",
+                  "href": "/portfolio"
                 },
                 {
-                  "label": "Latest News",
-                  "href": "#"
-                },
-                {
-                  "label": "Privacy Policy",
-                  "href": "#"
-                },
-                {
-                  "label": "Terms Conditions",
-                  "href": "#"
+                  "label": "Contact",
+                  "href": "/contact"
                 }
               ],
               "solutionLinks": [
                 {
-                  "label": "UI/UX Design",
-                  "href": "#"
+                  "label": "Service",
+                  "href": "/service"
                 },
                 {
-                  "label": "Web Development",
-                  "href": "#"
+                  "label": "Package",
+                  "href": "/package"
                 },
                 {
-                  "label": "Network Security",
-                  "href": "#"
+                  "label": "Blog",
+                  "href": "/blog"
                 },
                 {
-                  "label": "Cloud Computing",
-                  "href": "#"
-                },
-                {
-                  "label": "Web Design",
-                  "href": "#"
+                  "label": "Quote",
+                  "href": "/quote"
                 }
               ],
               "copyright": "copyright @ 2026. All Rights Reserved. Powerd by Lestow. "
