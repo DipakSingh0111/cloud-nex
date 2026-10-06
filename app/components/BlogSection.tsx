@@ -4,14 +4,21 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, ArrowRight } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type BlogNewsData, type SectionProps } from "@/data";
 
-export default function BlogSection({ limit }: { limit?: number }) {
-  const { section, posts } = data.blog;
+export default function BlogSection({
+  data,
+  className = "",
+  limit,
+}: SectionProps<BlogNewsData> & { limit?: number } = {}) {
+  const section = data || site.blog;
+  const { posts } = section;
   const blogPosts = limit ? posts.slice(0, limit) : posts;
 
   return (
-    <section className="bg-white pt-10 pb-4 lg:pb-8 px-4 sm:px-6 lg:px-8">
+    <section
+      className={`bg-white pt-10 pb-0 px-4 sm:px-6 lg:px-8 ${className}`}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Top Header Badge & Title */}
         <div className="text-left max-w-3xl mb-12">
@@ -25,7 +32,8 @@ export default function BlogSection({ limit }: { limit?: number }) {
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0B2545] tracking-tight mb-4">
-            {section.title} <span className="text-[#2fae38]">{section.highlight}</span>
+            {section.heading.main}{" "}
+            <span className="text-[#2fae38]">{section.heading.highlight}</span>
           </h2>
 
           {/* Subtitle */}
@@ -102,17 +110,6 @@ export default function BlogSection({ limit }: { limit?: number }) {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* View All Blogs Button */}
-        <div className="flex justify-center">
-          <Link
-            href={section.viewAll.url}
-            className="inline-flex items-center gap-2 bg-[#2fae38] hover:bg-[#289931] text-white text-sm font-semibold px-7 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group"
-          >
-            <span>{section.viewAll.text}</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </div>
     </section>

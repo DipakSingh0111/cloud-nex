@@ -2,17 +2,15 @@ import React from "react";
 import PageBanner from "../components/common/PageBanner";
 import BlogSection from "../components/BlogSection";
 import ServiceCtaBanner from "../components/common/ServiceCtaBanner";
-import data from "../../data/cloudNex.json";
+import { site } from "@/data";
 
 export default function BlogPage() {
-  const { listBanner } = data.blog;
-
   return (
-    <main>
-      <PageBanner title={listBanner.title} breadcrumbs={listBanner.breadcrumbs} />
-      <BlogSection />
-      <div className="pt-8 lg:pt-10 bg-white">
-        <ServiceCtaBanner />
+    <main className="bg-white flex flex-col">
+      <PageBanner data={site.pageBanners.pages.blog} />
+      <BlogSection data={site.blog} />
+      <div className="bg-white pb-8">
+        <ServiceCtaBanner data={site.ctaBanner} />
       </div>
     </main>
   );

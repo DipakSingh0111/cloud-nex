@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone, type LucideIcon } from "lucide-react";
-import data from "../../../data/cloudNex.json";
+import { site, type GetInTouchData, type SectionProps } from "@/data";
 
 const icons: Record<string, LucideIcon> = { MapPin, Phone, Mail };
 
@@ -8,20 +8,23 @@ const iconStyles: Record<string, string> = {
   green: "bg-[#2e9b2e]",
 };
 
-export default function GetInTouch() {
-  const { getInTouch } = data.contactPage;
+export default function GetInTouch({ data, className = "" }: SectionProps<GetInTouchData> = {}) {
+  const getInTouch = data || site.contact.getInTouch;
 
   return (
-    <section className="bg-white py-12 lg:py-14 px-4 sm:px-6 lg:px-8">
+    <section className={`bg-white py-12 lg:py-14 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto bg-[#f2f7fe] rounded-3xl p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-6 lg:gap-8">
         <div className="lg:py-2 lg:pl-2">
           <h2 className="text-3xl font-extrabold text-[#0B2545] mb-3">
-            {getInTouch.title} <span className="text-[#2e9b2e]">{getInTouch.highlight}</span>
+            {getInTouch.heading.main}{" "}
+            <span className="text-[#2e9b2e]">{getInTouch.heading.highlight}</span>
           </h2>
-          <p className="text-sm text-[#4a5868] leading-relaxed mb-6">{getInTouch.description}</p>
+          <p className="text-sm text-[#4a5868] leading-relaxed mb-6">
+            {getInTouch.description}
+          </p>
 
           <div className="space-y-3">
-            {getInTouch.items.map((item) => {
+            {getInTouch.list.map((item) => {
               const Icon = icons[item.icon] ?? MapPin;
               return (
                 <div
@@ -33,9 +36,13 @@ export default function GetInTouch() {
                   >
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="w-24 shrink-0 text-sm font-bold text-[#0B2545]">{item.title}</h3>
+                  <h3 className="w-24 shrink-0 text-sm font-bold text-[#0B2545]">
+                    {item.title}
+                  </h3>
                   <div className="text-[13px] leading-relaxed">
-                    <p className="font-semibold text-[#0B2545]">{item.lines[0]}</p>
+                    <p className="font-semibold text-[#0B2545]">
+                      {item.lines[0]}
+                    </p>
                     <p className="text-[#4a5868]">{item.lines[1]}</p>
                   </div>
                 </div>

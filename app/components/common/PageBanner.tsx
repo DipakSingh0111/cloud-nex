@@ -4,24 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import data from "../../../data/cloudNex.json";
+import { site, type PageBannerData, type SectionProps } from "@/data";
 
-export interface Breadcrumb {
-  label: string;
-  url: string;
-}
+export type { Breadcrumb } from "@/data";
 
-interface PageBannerProps {
-  title: string;
-  breadcrumbs: Breadcrumb[];
-  bgImage?: string;
-}
-
-export default function PageBanner({ title, breadcrumbs, bgImage }: PageBannerProps) {
-  const bg = bgImage || data.pageBanner.defaultBg;
+export default function PageBanner({ data, className = "" }: SectionProps<PageBannerData> = {}) {
+  const banner: PageBannerData = data || site.pageBanners.pages.portfolio;
+  const { title, breadcrumbs } = banner;
+  const bg = banner.bgImage || site.pageBanners.defaultBg;
 
   return (
-    <section className="relative w-full h-[280px] sm:h-[320px] lg:h-[380px] flex items-center justify-center overflow-hidden font-sans mt-[-1px]">
+    <section className={`relative w-full h-[280px] sm:h-[320px] lg:h-[380px] flex items-center justify-center overflow-hidden font-sans mt-[-1px] ${className}`}>
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -56,7 +49,7 @@ export default function PageBanner({ title, breadcrumbs, bgImage }: PageBannerPr
               {idx === breadcrumbs.length - 1 ? (
                 <span className="uppercase text-white">{crumb.label}</span>
               ) : (
-                <Link href={crumb.url} className="uppercase text-white hover:text-blue-400 transition-colors">
+                <Link href={crumb.href} className="uppercase text-white hover:text-blue-400 transition-colors">
                   {crumb.label}
                 </Link>
               )}

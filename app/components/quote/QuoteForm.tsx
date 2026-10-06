@@ -15,7 +15,7 @@ import {
   Wallet,
   type LucideIcon,
 } from "lucide-react";
-import data from "../../../data/cloudNex.json";
+import { site, type QuoteFormData, type SectionProps } from "@/data";
 
 const fieldClass =
   "w-full h-12 pl-10 pr-3 rounded-lg border border-gray-200 bg-white text-sm text-[#0B2545] placeholder:text-gray-400 outline-none focus:border-[#1a6dff] focus:ring-2 focus:ring-[#1a6dff]/15 transition";
@@ -78,17 +78,17 @@ function Select({
   );
 }
 
-function Card({ children }: { children: ReactNode }) {
+function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-[0_20px_60px_rgba(11,37,69,0.12)] p-6 sm:p-8">
+    <div className={`bg-white rounded-2xl border border-gray-100 shadow-[0_20px_60px_rgba(11,37,69,0.12)] p-6 sm:p-8 ${className}`}>
       {children}
     </div>
   );
 }
 
-export default function QuoteForm() {
-  const { form } = data.quotePage;
-  const serviceOptions = [...data.services.items.map((s) => s.title), form.otherServiceLabel];
+export default function QuoteForm({ data, className = "" }: SectionProps<QuoteFormData> = {}) {
+  const form = data || site.quote.form;
+  const serviceOptions = [...site.services.list.map((s) => s.title), form.otherServiceLabel];
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -99,7 +99,7 @@ export default function QuoteForm() {
 
   if (submitted) {
     return (
-      <Card>
+      <Card className={className}>
         <div className="text-center py-10">
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#e7f6e7] flex items-center justify-center">
             <BadgeCheck className="w-10 h-10 text-[#2e9b2e]" />
@@ -118,9 +118,9 @@ export default function QuoteForm() {
   }
 
   return (
-    <Card>
+    <Card className={className}>
       <h2 className="text-2xl sm:text-[28px] font-bold text-[#0B2545] mb-2">
-        {form.title} <span className="text-[#2e9b2e]">{form.highlight}</span>
+        {form.heading.main} <span className="text-[#2e9b2e]">{form.heading.highlight}</span>
       </h2>
       <p className="text-sm text-[#4a5868] leading-relaxed mb-6">{form.description}</p>
 

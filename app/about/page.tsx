@@ -2,20 +2,23 @@ import AboutSection from "../components/AboutSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import HowItWorks from "../components/HowItWorks";
 import PageBanner from "../components/common/PageBanner";
+import { site } from "@/data";
 
 export default function Page() {
   return (
     <div>
-      <PageBanner 
-        title="About Us"
-        breadcrumbs={[
-          { label: "Home", url: "/" },
-          { label: "About Us", url: "/about" }
-        ]}
+      <PageBanner
+        data={{
+          title: "About Us",
+          breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "About Us", href: "/about" },
+          ],
+        }}
       />
-      <AboutSection />
-      <WhyChooseUs />
-      <HowItWorks />
+      <AboutSection data={site.about} />
+      <WhyChooseUs data={site.whyChooseUs} />
+      <HowItWorks data={site.workingProcess} />
     </div>
   );
 }

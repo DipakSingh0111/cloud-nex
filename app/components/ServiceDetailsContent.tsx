@@ -3,19 +3,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Smartphone, 
-  Zap, 
-  Search, 
-  Layers, 
-  Play, 
-  Rocket, 
-  Users, 
-  ShieldCheck, 
+import {
+  Smartphone,
+  Zap,
+  Search,
+  Layers,
+  Play,
+  Rocket,
+  Users,
+  ShieldCheck,
   TrendingUp,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type SectionProps, type ServiceDetailsData } from "@/data";
 
 const iconMap: Record<string, React.ElementType> = {
   Smartphone,
@@ -25,40 +25,41 @@ const iconMap: Record<string, React.ElementType> = {
   Rocket,
   Users,
   ShieldCheck,
-  TrendingUp
+  TrendingUp,
 };
 
-export default function ServiceDetailsContent() {
-  const { serviceDetails } = data;
+export default function ServiceDetailsContent({ data, className = "" }: SectionProps<ServiceDetailsData> = {}) {
+  const serviceDetails = data || site.serviceDetails;
   const { overview, approach, benefits } = serviceDetails;
 
   return (
-    <div className="bg-white font-sans">
-      
+    <div className={`bg-white font-sans ${className}`}>
       {/* OVERVIEW SECTION */}
       <section className="relative pt-8 lg:pt-12 pb-6 lg:pb-10 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
-            
             {/* Left Column: Content */}
             <div className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-3">
                 <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
                 <span className="text-xs font-bold tracking-[0.2em] text-[#0a1a44] uppercase">
-                  {overview.tagline}
+                  {overview.badge}
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] leading-tight tracking-tight">
-                {overview.title}
+                {overview.heading.main}
                 <span className="text-[#3cb024] block sm:inline">
-                  {overview.highlight}
+                  {overview.heading.highlight}
                 </span>
               </h2>
 
               <div className="space-y-4">
                 {overview.description.map((p, i) => (
-                  <p key={i} className="text-[15px] sm:text-[16px] text-[#5c6a7a] leading-relaxed font-medium">
+                  <p
+                    key={i}
+                    className="text-[15px] sm:text-[16px] text-[#5c6a7a] leading-relaxed font-medium"
+                  >
                     {p}
                   </p>
                 ))}
@@ -85,11 +86,14 @@ export default function ServiceDetailsContent() {
             <div className="lg:col-span-6 relative flex justify-center mt-10 lg:mt-0 lg:pl-10 h-full min-h-[350px]">
               <div className="absolute -top-6 -left-2 grid grid-cols-6 gap-2 opacity-30 pointer-events-none">
                 {Array.from({ length: 24 }).map((_, i) => (
-                  <div key={i} className="h-1.5 w-1.5 rounded-full bg-slate-400" />
+                  <div
+                    key={i}
+                    className="h-1.5 w-1.5 rounded-full bg-slate-400"
+                  />
                 ))}
               </div>
               <div className="absolute -bottom-6 -right-2 w-[180px] h-[180px] bg-[#3cb024] rounded-br-[40px] rounded-tl-[40px] pointer-events-none" />
-              
+
               <div className="relative z-10 w-full h-full rounded-[32px] border-[10px] border-white shadow-xl overflow-hidden">
                 <Image
                   src={overview.image}
@@ -99,7 +103,6 @@ export default function ServiceDetailsContent() {
                 />
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -108,7 +111,6 @@ export default function ServiceDetailsContent() {
       <section className="relative py-6 lg:py-10">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
             {/* Left Column: Video/Image */}
             <div className="lg:col-span-6 relative w-full h-[300px] sm:h-[400px] rounded-3xl overflow-hidden shadow-2xl group">
               <Image
@@ -118,7 +120,7 @@ export default function ServiceDetailsContent() {
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-[#0a1a44]/20" />
-              
+
               {/* Play Button */}
               <button className="absolute inset-0 m-auto w-20 h-20 bg-[#1a6dff] rounded-full flex items-center justify-center text-white shadow-[0_0_0_10px_rgba(26,109,255,0.3)] hover:scale-110 transition-transform">
                 <Play className="w-8 h-8 ml-1 fill-white" />
@@ -130,12 +132,12 @@ export default function ServiceDetailsContent() {
               <div className="flex items-center gap-3">
                 <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
                 <span className="text-xs font-bold tracking-[0.2em] text-[#0a1a44] uppercase">
-                  {approach.tagline}
+                  {approach.badge}
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] leading-tight tracking-tight">
-                {approach.title}
+                {approach.heading.main}
               </h2>
 
               <p className="text-[15px] sm:text-[16px] text-[#5c6a7a] leading-relaxed font-medium pb-2">
@@ -143,14 +145,13 @@ export default function ServiceDetailsContent() {
               </p>
 
               <Link
-                href={approach.button.url}
+                href={approach.button.href}
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-white font-bold text-[15px] bg-[#3cb024] hover:bg-[#329e1c] transition-all shadow-lg"
               >
-                <span>{approach.button.text}</span>
+                <span>{approach.button.label}</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Link>
             </div>
-            
           </div>
         </div>
       </section>
@@ -162,22 +163,27 @@ export default function ServiceDetailsContent() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
               <span className="text-xs font-bold tracking-[0.2em] text-[#0a1a44] uppercase">
-                {benefits.tagline}
+                {benefits.badge}
               </span>
               <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] tracking-tight">
-              {benefits.title}
-              <span className="text-[#3cb024]">{benefits.highlight}</span>
+              {benefits.heading.main}
+              <span className="text-[#3cb024]">{benefits.heading.highlight}</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.items.map((item, i) => {
+            {benefits.list.map((item, i) => {
               const Icon = iconMap[item.icon] || Rocket;
               return (
-                <div key={i} className="bg-white rounded-[24px] p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-xl transition-shadow border border-slate-50 flex flex-col items-center text-center">
-                  <div className={`w-20 h-20 rounded-full ${item.iconBg} flex items-center justify-center mb-6`}>
+                <div
+                  key={i}
+                  className="bg-white rounded-[24px] p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-xl transition-shadow border border-slate-50 flex flex-col items-center text-center"
+                >
+                  <div
+                    className={`w-20 h-20 rounded-full ${item.iconBg} flex items-center justify-center mb-6`}
+                  >
                     <Icon className={`w-8 h-8 ${item.iconColor} stroke-[2]`} />
                   </div>
                   <h3 className="text-xl font-bold text-[#0a1a44] mb-3 leading-snug">
@@ -192,7 +198,6 @@ export default function ServiceDetailsContent() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

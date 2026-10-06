@@ -2,12 +2,21 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CircleCheck, Crown, HandCoins, ShieldCheck } from "lucide-react";
-import data from "../../../data/cloudNex.json";
+import {
+  ArrowRight,
+  CircleCheck,
+  Crown,
+  HandCoins,
+  ShieldCheck,
+} from "lucide-react";
+import { site, type PackagesData, type SectionProps } from "@/data";
 
 type Billing = "monthly" | "yearly";
 
-const medalColors: Record<string, { from: string; to: string; ribbon: string }> = {
+const medalColors: Record<
+  string,
+  { from: string; to: string; ribbon: string }
+> = {
   bronze: { from: "#f0a46a", to: "#b5612a", ribbon: "#1a5fd6" },
   silver: { from: "#f1f4f8", to: "#9aa5b4", ribbon: "#2e9b2e" },
   gold: { from: "#ffe27a", to: "#e3a31a", ribbon: "#e0453a" },
@@ -27,7 +36,15 @@ function Medal({ type }: { type: string }) {
       <path d="M15 2h7l4 14h-7z" fill={c.ribbon} />
       <path d="M33 2h-7l-4 14h7z" fill={c.ribbon} opacity="0.8" />
       <circle cx="24" cy="30" r="14" fill={`url(#${id})`} />
-      <circle cx="24" cy="30" r="10" fill="none" stroke="#fff" strokeOpacity="0.6" strokeWidth="1.5" />
+      <circle
+        cx="24"
+        cy="30"
+        r="10"
+        fill="none"
+        stroke="#fff"
+        strokeOpacity="0.6"
+        strokeWidth="1.5"
+      />
       <path
         d="M24 23.5l2 4 4.4.6-3.2 3.1.8 4.4-4-2.1-4 2.1.8-4.4-3.2-3.1 4.4-.6z"
         fill="#fff"
@@ -37,12 +54,12 @@ function Medal({ type }: { type: string }) {
   );
 }
 
-export default function PricingSection() {
-  const page = data.packagePage;
+export default function PricingSection({ data, className = "" }: SectionProps<PackagesData> = {}) {
+  const page = data || site.packages;
   const [billing, setBilling] = useState<Billing>("monthly");
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f9ff] py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
+    <section className={`relative overflow-hidden bg-gradient-to-b from-white to-[#f5f9ff] py-14 lg:py-16 px-4 sm:px-6 lg:px-8 ${className}`}>
       <svg
         viewBox="0 0 200 120"
         className="absolute -top-4 right-0 w-[420px] text-[#e6effc] pointer-events-none hidden md:block"
@@ -59,15 +76,20 @@ export default function PricingSection() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
               <ShieldCheck className="w-5 h-5 text-white fill-[#2e9b2e]" />
-              <span className="text-sm font-semibold text-[#0B2545]">{page.badge}</span>
+              <span className="text-sm font-semibold text-[#0B2545]">
+                {page.badge}
+              </span>
               <span className="w-12 h-[2px] bg-[#2e9b2e] rounded-full ml-1" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-[#0B2545] leading-[1.1] tracking-tight mb-4">
-              {page.title}
+              {page.heading.main}
               <br />
-              {page.titleLine2} <span className="text-[#2e9b2e]">{page.highlight}</span>
+              {page.heading.line2}{" "}
+              <span className="text-[#2e9b2e]">{page.heading.highlight}</span>
             </h2>
-            <p className="text-[#4a5868] text-base leading-relaxed">{page.description}</p>
+            <p className="text-[#4a5868] text-base leading-relaxed">
+              {page.description}
+            </p>
           </div>
 
           <div className="inline-flex self-start lg:self-center bg-white rounded-full p-1.5 shadow-[0_6px_24px_rgba(26,95,214,0.12)]">
@@ -88,7 +110,7 @@ export default function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {page.plans.map((plan) => {
+          {page.list.map((plan) => {
             const green = plan.popular;
             const accent = green ? "text-[#2e9b2e]" : "text-[#1a5fd6]";
 
@@ -113,7 +135,9 @@ export default function PricingSection() {
                     <h3 className="text-2xl font-extrabold text-[#0B2545]">
                       {plan.name} <span className={accent}>Plan</span>
                     </h3>
-                    <p className="text-sm text-[#4a5868] mt-1">{page.subtitle}</p>
+                    <p className="text-sm text-[#4a5868] mt-1">
+                      {page.subtitle}
+                    </p>
                   </div>
                   <div className="w-16 h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-[0_6px_20px_rgba(11,37,69,0.12)]">
                     <Medal type={plan.medal} />
@@ -121,7 +145,9 @@ export default function PricingSection() {
                 </div>
 
                 <p className="mb-4">
-                  <span className={`text-4xl lg:text-[44px] font-extrabold ${accent}`}>
+                  <span
+                    className={`text-4xl lg:text-[44px] font-extrabold ${accent}`}
+                  >
                     {plan.price[billing]}
                   </span>
                   <span className="text-sm font-semibold text-[#0B2545] ml-1">
@@ -150,7 +176,10 @@ export default function PricingSection() {
                   }`}
                 >
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2.5 text-sm text-[#33414f]">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2.5 text-sm text-[#33414f]"
+                    >
                       <CircleCheck
                         className={`w-[18px] h-[18px] shrink-0 text-white ${
                           green ? "fill-[#2e9b2e]" : "fill-[#1a5fd6]"
@@ -162,14 +191,14 @@ export default function PricingSection() {
                 </ul>
 
                 <Link
-                  href={plan.button.url}
+                  href={plan.button.href}
                   className={`h-12 rounded-xl text-white font-semibold flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5 group ${
                     green
                       ? "bg-gradient-to-r from-[#2e9b2e] to-[#1f7a1f] shadow-[0_8px_20px_rgba(46,155,46,0.35)]"
                       : "bg-gradient-to-r from-[#1a6dff] to-[#0b3fb8] shadow-[0_8px_20px_rgba(26,109,255,0.35)]"
                   }`}
                 >
-                  {plan.button.text}
+                  {plan.button.label}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

@@ -13,34 +13,40 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import data from "../../data/cloudNex.json";
+import { site, type PortfolioProjectsData, type SectionProps } from "@/data";
 
-const icons: Record<string, LucideIcon> = { Cloud, Database, ShieldCheck, Users, LayoutGrid };
+const icons: Record<string, LucideIcon> = {
+  Cloud,
+  Database,
+  ShieldCheck,
+  Users,
+  LayoutGrid,
+};
 
-export default function PortfolioSection() {
-  const { projects } = data.portfolioPage;
+export default function PortfolioSection({ data, className = "" }: SectionProps<PortfolioProjectsData> = {}) {
+  const projects = data || site.portfolio.projects;
   const filterIcons: Record<string, string> = projects.filterIcons;
   const [activeFilter, setActiveFilter] = useState(projects.filters[0]);
 
   const filteredProjects =
     activeFilter === projects.filters[0]
-      ? projects.items
-      : projects.items.filter((item) => item.category === activeFilter);
+      ? projects.list
+      : projects.list.filter((item) => item.category === activeFilter);
 
   return (
-    <section className="bg-white pt-16 lg:pt-20 pb-4 lg:pb-8 px-4 sm:px-6 lg:px-8">
+    <section className={`bg-white pt-16 lg:pt-20 pb-4 lg:pb-8 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-left max-w-3xl mb-10">
           <div className="inline-flex items-center gap-4 mb-4">
             <span className="bg-[#e3eefc] text-[#1a5fd6] text-sm font-semibold tracking-[0.15em] uppercase px-5 py-1.5 rounded-md">
-              {projects.tagline}
+              {projects.badge}
             </span>
             <span className="w-12 h-[2px] bg-[#7fb0ff] rounded-full" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#0B2545] tracking-tight leading-tight mb-4">
-            {projects.title}
-            <span className="text-[#2e9b2e]">{projects.highlight}</span>
+            {projects.heading.main}
+            <span className="text-[#2e9b2e]">{projects.heading.highlight}</span>
           </h2>
 
           <p className="text-[#4a5868] text-base sm:text-[17px] leading-relaxed max-w-2xl mx-auto">

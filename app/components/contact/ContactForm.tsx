@@ -11,7 +11,7 @@ import {
   User,
   type LucideIcon,
 } from "lucide-react";
-import data from "../../../data/cloudNex.json";
+import { site, type ContactFormData, type SectionProps } from "@/data";
 
 const inputClass =
   "w-full h-12 pl-10 pr-3 rounded-lg border border-gray-200 bg-white text-sm text-[#0B2545] placeholder:text-gray-400 outline-none focus:border-[#1a6dff] focus:ring-2 focus:ring-[#1a6dff]/15 transition";
@@ -28,8 +28,8 @@ function Field({
   );
 }
 
-export default function ContactForm() {
-  const { form } = data.contactPage;
+export default function ContactForm({ data, className = "" }: SectionProps<ContactFormData> = {}) {
+  const form = data || site.contact.form;
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -39,7 +39,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(11,37,69,0.12)] border border-gray-100 p-6 sm:p-7">
+    <div className={`bg-white rounded-2xl shadow-[0_20px_60px_rgba(11,37,69,0.12)] border border-gray-100 p-6 sm:p-7 ${className}`}>
       <h2 className="text-2xl font-bold text-[#0B2545] mb-2">{form.title}</h2>
       <p className="text-sm text-[#4a5868] leading-relaxed mb-6">{form.description}</p>
 

@@ -1,20 +1,18 @@
 import PageBanner from "../components/common/PageBanner";
 import ContactHero from "../components/contact/ContactHero";
 import GetInTouch from "../components/contact/GetInTouch";
-import data from "../../data/cloudNex.json";
+import { site } from "@/data";
 
 export const metadata = {
-  title: "Contact Us | CloudNex",
+  title: `Contact Us | ${site.global.companyName}`,
 };
 
 export default function ContactPage() {
-  const { banner } = data.contactPage;
-
   return (
     <div>
-      <PageBanner title={banner.title} breadcrumbs={banner.breadcrumbs} bgImage={banner.bgImage} />
-      <ContactHero />
-      <GetInTouch />
+      <PageBanner data={site.pageBanners.pages.contact} />
+      <ContactHero data={site.contact.hero} />
+      <GetInTouch data={site.contact.getInTouch} />
     </div>
   );
 }

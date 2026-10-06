@@ -18,9 +18,9 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type BlogPost, type SectionProps } from "@/data";
 
-export type BlogPost = (typeof data.blog.posts)[number];
+export type { BlogPost } from "@/data";
 
 const icons: Record<string, LucideIcon> = {
   ChartColumnIncreasing,
@@ -46,8 +46,9 @@ function splitTitle(title: string, highlight: string) {
     : [title, ""];
 }
 
-export default function BlogDetailsContent({ post }: { post: BlogPost }) {
-  const { details, posts } = data.blog;
+export default function BlogDetailsContent({ data, className = "" }: SectionProps<BlogPost> = {}) {
+  const { details, posts } = site.blog;
+  const post = data || posts[0];
   const [titleStart, titleHighlight] = splitTitle(post.title, post.highlight);
 
   const recentPosts = [
@@ -60,12 +61,12 @@ export default function BlogDetailsContent({ post }: { post: BlogPost }) {
     .slice(0, 3);
 
   return (
-    <section className="bg-white pt-8 lg:pt-10 pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
+    <section className={`bg-white pt-8 lg:pt-10 pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
         <nav className="flex flex-wrap items-center gap-2 text-[13px] text-[#5c6a7a] mb-6">
           {details.miniBreadcrumbs.map((crumb) => (
             <span key={crumb.label} className="flex items-center gap-2">
-              <Link href={crumb.url} className="hover:text-[#1a6dff] transition-colors">
+              <Link href={crumb.href} className="hover:text-[#1a6dff] transition-colors">
                 {crumb.label}
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -232,18 +233,18 @@ export default function BlogDetailsContent({ post }: { post: BlogPost }) {
               <div className="relative max-w-[62%]">
                 <p className="text-xs font-semibold text-[#9cc3ff] mb-2">{details.ctaCard.eyebrow}</p>
                 <h3 className="text-2xl font-extrabold leading-tight mb-3">
-                  {details.ctaCard.title}{" "}
-                  <span className="text-[#4cc94c]">{details.ctaCard.highlight}</span>
+                  {details.ctaCard.heading.main}{" "}
+                  <span className="text-[#4cc94c]">{details.ctaCard.heading.highlight}</span>
                 </h3>
               </div>
               <p className="relative text-xs text-blue-100/80 leading-relaxed mb-5 max-w-[85%]">
                 {details.ctaCard.description}
               </p>
               <Link
-                href={details.ctaCard.button.url}
+                href={details.ctaCard.button.href}
                 className="relative inline-flex items-center gap-2 bg-[#2e9b2e] hover:bg-[#237a23] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors group"
               >
-                {details.ctaCard.button.text}
+                {details.ctaCard.button.label}
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>

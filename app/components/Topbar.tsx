@@ -1,20 +1,32 @@
-import React from 'react';
-import data from '../../data/cloudNex.json';
+import React from "react";
+import { site, type SectionProps, type TopbarData } from "@/data";
 
 const PhoneIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-white">
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-3.5 h-3.5 text-white"
+  >
     <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.4-3.6-8-8-8v2c3.3 0 6 2.7 6 6zm-4 0h2c0-2.2-1.8-4-4-4v2c1.1 0 2 .9 2 2z" />
   </svg>
 );
 
 const EmailIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-white">
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-3.5 h-3.5 text-white"
+  >
     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
   </svg>
 );
 
 const LocationIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-white">
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-3.5 h-3.5 text-white"
+  >
     <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z" />
   </svg>
 );
@@ -43,52 +55,82 @@ const LinkedInIcon = () => (
   </svg>
 );
 
+const DribbbleIcon = () => (
+  <svg
+    className="w-4 h-4 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+    <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+    <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+  </svg>
+);
+
+const BehanceIcon = () => (
+  <span className="font-bold text-xs text-white">Bē</span>
+);
+
 const getSocialIcon = (platform: string) => {
   switch (platform.toLowerCase()) {
-    case 'facebook': return <FacebookIcon />;
-    case 'x': return <XIcon />;
-    case 'pinterest': return <PinterestIcon />;
-    case 'linkedin': return <LinkedInIcon />;
-    default: return null;
+    case "facebook":
+      return <FacebookIcon />;
+    case "x":
+      return <XIcon />;
+    case "dribbble":
+      return <DribbbleIcon />;
+    case "behance":
+      return <BehanceIcon />;
+    case "linkedin":
+      return <LinkedInIcon />;
+    default:
+      return null;
   }
 };
 
-export default function Topbar() {
+export default function Topbar({ data, className = "" }: SectionProps<TopbarData> = {}) {
+  const topbar = data || site.topbar;
+
   return (
-    <div className="bg-[#052136] w-full hidden md:flex">
+    <div className={`bg-[#052136] w-full hidden md:flex ${className}`}>
       <div className="text-white py-3.5 px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[15px] font-sans w-full max-w-7xl mx-auto">
-      <div className="flex gap-8">
-        <div className="flex items-center gap-3">
-          <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
-            <PhoneIcon />
+        <div className="flex gap-8">
+          <div className="flex items-center gap-3">
+            <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
+              <PhoneIcon />
+            </div>
+            <span>{topbar.phone}</span>
           </div>
-          <span>{data.topbar.phone}</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
-            <EmailIcon />
+          <div className="flex items-center gap-3">
+            <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
+              <EmailIcon />
+            </div>
+            <span>{topbar.email}</span>
           </div>
-          <span>{data.topbar.email}</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
-            <LocationIcon />
+          <div className="flex items-center gap-3">
+            <div className="bg-[#639818] w-7 h-7 rounded-full flex items-center justify-center">
+              <LocationIcon />
+            </div>
+            <span>{topbar.address}</span>
           </div>
-          <span>{data.topbar.address}</span>
         </div>
-      </div>
-      <div className="flex gap-4">
-        {data.topbar.socials.map((social, index) => (
-          <a
-            key={index}
-            href={social.url}
-            className="border border-white/30 w-[34px] h-[34px] rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#639818] hover:border-[#639818]"
-            aria-label={social.platform}
-          >
-            {getSocialIcon(social.icon)}
-          </a>
-        ))}
-      </div>
+        <div className="flex gap-4">
+          {topbar.socials.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              className="border border-white/30 w-[34px] h-[34px] rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#639818] hover:border-[#639818]"
+              aria-label={social.platform}
+            >
+              {getSocialIcon(social.icon)}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

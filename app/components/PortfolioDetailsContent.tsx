@@ -16,7 +16,7 @@ import {
   Link as LinkIcon,
   Mail
 } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type PortfolioDetailsData, type SectionProps } from "@/data";
 
 const iconMap: Record<string, React.ElementType> = {
   User,
@@ -27,12 +27,12 @@ const iconMap: Record<string, React.ElementType> = {
   MapPin
 };
 
-export default function PortfolioDetailsContent() {
-  const { portfolioDetails } = data;
+export default function PortfolioDetailsContent({ data, className = "" }: SectionProps<PortfolioDetailsData> = {}) {
+  const portfolioDetails = data || site.portfolioDetails;
   const { overview, challenges, solution, information } = portfolioDetails;
 
   return (
-    <section className="bg-white pt-16 lg:pt-24 pb-0 font-sans">
+    <section className={`bg-white pt-16 lg:pt-24 pb-0 font-sans ${className}`}>
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
@@ -43,16 +43,16 @@ export default function PortfolioDetailsContent() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
-                <span className="text-sm font-bold text-[#0a1a44]">{overview.tagline}</span>
+                <span className="text-sm font-bold text-[#0a1a44]">{overview.badge}</span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0a1a44] leading-tight tracking-tight whitespace-pre-line">
-                {overview.title.split('\n').map((line, i) => (
+                {overview.heading.main.split('\n').map((line, i) => (
                   <React.Fragment key={i}>
                     {line}
-                    {i === 1 && <span className="text-[#3cb024]">{overview.highlight}</span>}
+                    {i === 1 && <span className="text-[#3cb024]">{overview.heading.highlight}</span>}
                   </React.Fragment>
                 ))}
-                {overview.title.indexOf('\n') === -1 && <span className="text-[#3cb024]">{overview.highlight}</span>}
+                {overview.heading.main.indexOf('\n') === -1 && <span className="text-[#3cb024]">{overview.heading.highlight}</span>}
               </h2>
               <div className="space-y-4">
                 {overview.description.map((p, i) => (
@@ -83,7 +83,7 @@ export default function PortfolioDetailsContent() {
                 <div className="space-y-5">
                   <div className="flex items-center gap-3">
                     <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
-                    <h3 className="text-2xl font-bold text-[#0a1a44]">{challenges.tagline}</h3>
+                    <h3 className="text-2xl font-bold text-[#0a1a44]">{challenges.badge}</h3>
                   </div>
                   <p className="text-[15px] sm:text-[16px] text-[#5c6a7a] leading-relaxed font-medium">
                     {challenges.description}
@@ -169,10 +169,10 @@ export default function PortfolioDetailsContent() {
               </div>
 
               <Link
-                href={information.button.url}
+                href={information.button.href}
                 className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#1a6dff] to-[#3cb024] text-white py-4 rounded-xl font-bold text-[16px] hover:shadow-[0_10px_25px_rgba(60,176,36,0.25)] transition-all active:scale-[0.98]"
               >
-                {information.button.text}
+                {information.button.label}
                 <ArrowRight className="w-5 h-5 stroke-[2.5]" />
               </Link>
 

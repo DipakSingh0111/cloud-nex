@@ -1,18 +1,16 @@
 import PageBanner from "../components/common/PageBanner";
 import QuoteSection from "../components/quote/QuoteSection";
-import data from "../../data/cloudNex.json";
+import { site } from "@/data";
 
 export const metadata = {
-  title: "Get A Quote | CloudNex",
+  title: `Get A Quote | ${site.global.companyName}`,
 };
 
 export default function QuotePage() {
-  const { banner } = data.quotePage;
-
   return (
     <div>
-      <PageBanner title={banner.title} breadcrumbs={banner.breadcrumbs} />
-      <QuoteSection />
+      <PageBanner data={site.pageBanners.pages.quote} />
+      <QuoteSection data={site.quote} />
     </div>
   );
 }

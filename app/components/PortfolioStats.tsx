@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Users, Cloud, ShieldCheck, Headset } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type PortfolioStatsData, type SectionProps } from "@/data";
 
 const iconMap: Record<string, React.ElementType> = {
   Users,
@@ -11,12 +11,11 @@ const iconMap: Record<string, React.ElementType> = {
   Headset
 };
 
-export default function PortfolioStats() {
-  const { portfolioPage } = data;
-  const { stats } = portfolioPage;
+export default function PortfolioStats({ data, className = "" }: SectionProps<PortfolioStatsData> = {}) {
+  const stats = data || site.portfolio.stats;
 
   return (
-    <section className="bg-[#0a1a44] py-14 lg:py-16 font-sans relative overflow-hidden">
+    <section className={`bg-[#0a1a44] py-14 lg:py-16 font-sans relative overflow-hidden ${className}`}>
       
       {/* Background Gradients/Patterns */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-900/20 to-transparent pointer-events-none" />

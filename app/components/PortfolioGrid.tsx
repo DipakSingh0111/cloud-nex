@@ -13,7 +13,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { motion } from "framer-motion";
-import data from "../../data/cloudNex.json";
+import { site, type PortfolioProjectsData, type SectionProps } from "@/data";
 
 const iconMap: Record<string, React.ElementType> = {
   Cloud,
@@ -24,17 +24,16 @@ const iconMap: Record<string, React.ElementType> = {
   CloudLightning
 };
 
-export default function PortfolioGrid() {
-  const { portfolioPage } = data;
-  const { projects } = portfolioPage;
-  const [activeFilter, setActiveFilter] = useState("All");
+export default function PortfolioGrid({ data, className = "" }: SectionProps<PortfolioProjectsData> = {}) {
+  const projects = data || site.portfolio.projects;
+  const [activeFilter, setActiveFilter] = useState(projects.filters[0]);
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects.items 
-    : projects.items.filter(item => item.category === activeFilter);
+  const filteredProjects = activeFilter === projects.filters[0]
+    ? projects.list 
+    : projects.list.filter(item => item.category === activeFilter);
 
   return (
-    <section className="bg-white pt-16 lg:pt-24 pb-12 lg:pb-16 font-sans">
+    <section className={`bg-white pt-16 lg:pt-24 pb-12 lg:pb-16 font-sans ${className}`}>
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Header */}
@@ -42,14 +41,14 @@ export default function PortfolioGrid() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="h-[2px] w-10 bg-slate-300 rounded-full inline-block" />
             <span className="text-xs font-bold tracking-[0.2em] text-[#1a6dff] bg-blue-50 px-3 py-1 rounded-full uppercase">
-              {projects.tagline}
+              {projects.badge}
             </span>
             <span className="h-[2px] w-10 bg-slate-300 rounded-full inline-block" />
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#0a1a44] tracking-tight mb-5 leading-tight">
-            {projects.title}
-            <span className="text-[#3cb024]">{projects.highlight}</span>
+            {projects.heading.main}
+            <span className="text-[#3cb024]">{projects.heading.highlight}</span>
           </h2>
           
           <p className="text-[16px] text-[#5c6a7a] font-medium leading-relaxed max-w-2xl mx-auto">
@@ -124,7 +123,7 @@ export default function PortfolioGrid() {
                     href={item.link}
                     className="inline-flex items-center gap-1.5 text-[#3cb024] font-bold text-[13px] uppercase tracking-wide hover:text-[#2d9418] transition-colors mt-auto"
                   >
-                    View Details 
+                    {projects.viewDetailsLabel}
                     <ArrowRight className="w-4 h-4 stroke-[3]" />
                   </Link>
                 </div>

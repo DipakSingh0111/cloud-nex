@@ -2,7 +2,7 @@
 
 import React from "react";
 import { MessageSquare, MonitorCheck, CloudUpload, FileCheck } from "lucide-react";
-import data from "../../data/cloudNex.json";
+import { site, type PortfolioProcessData, type SectionProps } from "@/data";
 
 const iconMap: Record<string, React.ElementType> = {
   MessageSquare,
@@ -11,12 +11,11 @@ const iconMap: Record<string, React.ElementType> = {
   FileCheck
 };
 
-export default function WorkingProcess() {
-  const { portfolioPage } = data;
-  const { process } = portfolioPage;
+export default function WorkingProcess({ data, className = "" }: SectionProps<PortfolioProcessData> = {}) {
+  const process = data || site.portfolio.process;
 
   return (
-    <section className="bg-[#f8faff] py-16 lg:py-24 font-sans relative overflow-hidden">
+    <section className={`bg-[#f8faff] py-16 lg:py-24 font-sans relative overflow-hidden ${className}`}>
       
       {/* Decorative Lines */}
       <div className="absolute top-1/2 left-0 w-full h-[1px] bg-slate-200 hidden lg:block -translate-y-12 z-0 opacity-50" />
@@ -28,14 +27,14 @@ export default function WorkingProcess() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
             <span className="text-xs font-bold tracking-[0.2em] text-[#0a1a44] bg-blue-50 px-3 py-1 rounded-full uppercase">
-              {process.tagline}
+              {process.badge}
             </span>
             <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] tracking-tight mb-5 leading-tight">
-            {process.title}
-            <span className="text-[#3cb024]">{process.highlight}</span>
+            {process.heading.main}
+            <span className="text-[#3cb024]">{process.heading.highlight}</span>
           </h2>
           
           <p className="text-[16px] text-[#5c6a7a] font-medium leading-relaxed max-w-2xl mx-auto">
@@ -61,7 +60,7 @@ export default function WorkingProcess() {
             </svg>
           </div>
 
-          {process.steps.map((step, idx) => {
+          {process.list.map((step, idx) => {
             const Icon = iconMap[step.icon] || MessageSquare;
             return (
               <div key={idx} className="relative z-10 flex flex-col items-center text-center">

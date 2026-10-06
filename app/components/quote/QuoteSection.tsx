@@ -1,14 +1,15 @@
 import { CircleCheck, FileCheck, Mail, PhoneCall, SearchCheck, Send, type LucideIcon } from "lucide-react";
-import data from "../../../data/cloudNex.json";
+import { site, type QuotePageData, type SectionProps } from "@/data";
 import QuoteForm from "./QuoteForm";
 
 const stepIcons: Record<string, LucideIcon> = { Send, SearchCheck, FileCheck };
 
-export default function QuoteSection() {
-  const { intro, nextSteps, contactCard } = data.quotePage;
+export default function QuoteSection({ data, className = "" }: SectionProps<QuotePageData> = {}) {
+  const quote = data || site.quote;
+  const { intro, nextSteps, contactCard } = quote;
 
   return (
-    <section className="relative overflow-clip bg-gradient-to-br from-white via-[#f7fbff] to-[#eaf3fe] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className={`relative overflow-clip bg-gradient-to-br from-white via-[#f7fbff] to-[#eaf3fe] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#dbe9fd]/60 pointer-events-none" />
       <div className="absolute bottom-0 -left-32 w-96 h-96 rounded-full bg-[#e7f6e7]/50 blur-3xl pointer-events-none" />
 
@@ -20,7 +21,7 @@ export default function QuoteSection() {
           </div>
 
           <h1 className="text-4xl sm:text-[44px] font-extrabold text-[#0B2545] leading-[1.12] tracking-tight mb-5">
-            {intro.title} <span className="text-[#2e9b2e]">{intro.highlight}</span>
+            {intro.heading.main} <span className="text-[#2e9b2e]">{intro.heading.highlight}</span>
           </h1>
 
           <p className="text-[#4a5868] text-base leading-relaxed mb-7">{intro.description}</p>
@@ -37,7 +38,7 @@ export default function QuoteSection() {
           <h2 className="text-xl font-bold text-[#0B2545] mb-5">{nextSteps.title}</h2>
           <ol className="relative space-y-5 mb-10">
             <span className="absolute left-6 top-6 bottom-6 border-l-2 border-dashed border-[#bcd4f7]" aria-hidden />
-            {nextSteps.steps.map((step, i) => {
+            {nextSteps.list.map((step, i) => {
               const Icon = stepIcons[step.icon] ?? Send;
               const green = i % 2 === 1;
               return (
@@ -89,7 +90,7 @@ export default function QuoteSection() {
         </div>
 
         <div className="lg:sticky lg:top-36">
-          <QuoteForm />
+          <QuoteForm data={quote.form} />
         </div>
       </div>
     </section>
