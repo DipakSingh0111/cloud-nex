@@ -216,7 +216,7 @@ export default function HowItWorks({ data, className = "" }: SectionProps<Workin
 
   return (
     <section className={`bg-white pt-0 px-4 sm:px-6 lg:px-8 ${className}`}>
-      <div className="max-w-7xl mx-auto pb-12 lg:pb-16">
+      <div className="max-w-[1216px] mx-auto pb-12 lg:pb-16">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-4 mb-4">
             <span className="w-12 h-[2px] bg-[#7fb0ff] rounded-full" />

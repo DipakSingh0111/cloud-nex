@@ -31,7 +31,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
         }}
       />
       <PortfolioDetailsContent data={site.portfolioDetails} />
-      <div className="pt-10 lg:pt-16 bg-white">
+      <div className="pt-12 lg:pt-14 bg-white">
         <ServiceCtaBanner data={site.ctaBanner} />
       </div>
     </main>

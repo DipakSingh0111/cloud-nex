@@ -59,7 +59,7 @@ export default function PricingSection({ data, className = "" }: SectionProps<Pa
   const [billing, setBilling] = useState<Billing>("monthly");
 
   return (
-    <section className={`relative overflow-hidden bg-gradient-to-b from-white to-[#f5f9ff] py-14 lg:py-16 px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section className={`relative overflow-hidden bg-gradient-to-b from-white to-[#f5f9ff] pt-14 lg:pt-16 pb-12 lg:pb-14 px-4 sm:px-6 lg:px-8 ${className}`}>
       <svg
         viewBox="0 0 200 120"
         className="absolute -top-4 right-0 w-[420px] text-[#e6effc] pointer-events-none hidden md:block"

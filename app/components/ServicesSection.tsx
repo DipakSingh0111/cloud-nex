@@ -21,15 +21,15 @@ export default function ServicesSection({ data, className = "" }: SectionProps<S
   const services = data || site.services;
 
   return (
-    <section className={`relative bg-[#f3f8fe] pt-16 lg:pt-20 pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden ${className}`}>
+    <section className={`relative bg-[#f3f8fe] pt-10 lg:pt-12 pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden ${className}`}>
       <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#e3eefc] pointer-events-none" />
       <div className="absolute -top-20 -right-28 w-80 h-80 rounded-full bg-white/70 pointer-events-none" />
       <DotGrid className="top-6 left-[12%] hidden md:grid" />
       <DotGrid className="top-10 right-[8%] hidden md:grid" />
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-[1216px] mx-auto">
         <SectionHeading
-          align="left"
+          align="center"
           badge={services.badge}
           title={services.heading.main}
           highlight={services.heading.highlight}

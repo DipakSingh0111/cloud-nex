@@ -11,8 +11,10 @@ import {
   Play,
   Rocket,
   Users,
+  UsersRound,
   ShieldCheck,
   TrendingUp,
+  ChartColumnIncreasing,
   ArrowRight,
 } from "lucide-react";
 import { site, type SectionProps, type ServiceDetailsData } from "@/data";
@@ -24,8 +26,10 @@ const iconMap: Record<string, React.ElementType> = {
   Layers,
   Rocket,
   Users,
+  UsersRound,
   ShieldCheck,
   TrendingUp,
+  ChartColumnIncreasing,
 };
 
 export default function ServiceDetailsContent({ data, className = "" }: SectionProps<ServiceDetailsData> = {}) {
@@ -157,39 +161,38 @@ export default function ServiceDetailsContent({ data, className = "" }: SectionP
       </section>
 
       {/* KEY BENEFITS SECTION */}
-      <section className="relative py-10 lg:py-14 bg-[#f8fbff]">
+      <section className="relative py-10 lg:py-14 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
-              <span className="text-xs font-bold tracking-[0.2em] text-[#0a1a44] uppercase">
+          <div className="mb-8">
+            <div className="flex items-center gap-4 mb-2">
+              <span className="h-[3px] w-12 bg-[#3cb024] rounded-full inline-block" />
+              <span className="text-xs font-bold tracking-[0.15em] text-[#0a1a44] uppercase">
                 {benefits.badge}
               </span>
-              <span className="h-[2px] w-10 bg-[#3cb024] rounded-full inline-block" />
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0a1a44] tracking-tight leading-tight">
               {benefits.heading.main}
               <span className="text-[#3cb024]">{benefits.heading.highlight}</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
             {benefits.list.map((item, i) => {
               const Icon = iconMap[item.icon] || Rocket;
               return (
                 <div
                   key={i}
-                  className="bg-white rounded-[24px] p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-xl transition-shadow border border-slate-50 flex flex-col items-center text-center"
+                  className="bg-gradient-to-br from-[#f2f7fe] to-[#f8fbff] rounded-[20px] p-6 lg:p-7 shadow-[0_6px_24px_rgba(26,95,214,0.06)] hover:shadow-[0_14px_34px_rgba(26,95,214,0.12)] hover:-translate-y-1 transition-all duration-300 border border-white"
                 >
                   <div
-                    className={`w-20 h-20 rounded-full ${item.iconBg} flex items-center justify-center mb-6`}
+                    className={`w-14 h-14 rounded-full ${item.iconBg} flex items-center justify-center mb-6 shadow-[0_8px_18px_rgba(26,109,255,0.25)]`}
                   >
-                    <Icon className={`w-8 h-8 ${item.iconColor} stroke-[2]`} />
+                    <Icon className={`w-6 h-6 ${item.iconColor} stroke-[2]`} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#0a1a44] mb-3 leading-snug">
+                  <h3 className="text-lg font-bold text-[#0a1a44] mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-[14.5px] text-[#5c6a7a] font-medium leading-relaxed">
+                  <p className="text-[15px] text-[#4a5868] leading-relaxed">
                     {item.description}
                   </p>
                 </div>

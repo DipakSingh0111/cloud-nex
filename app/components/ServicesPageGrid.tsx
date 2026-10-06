@@ -10,7 +10,7 @@ export default function ServicesPageGrid({ data, className = "" }: SectionProps<
   const servicesPage = data || site.servicesPage;
 
   return (
-    <section className={`bg-white pt-8 lg:pt-12 pb-16 lg:pb-24 relative overflow-hidden font-sans ${className}`}>
+    <section className={`bg-white pt-8 lg:pt-12 pb-12 lg:pb-14 relative overflow-hidden font-sans ${className}`}>
       {/* Top Background Waves / Gradient overlay */}
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#f4f8fe] to-white pointer-events-none" />
 

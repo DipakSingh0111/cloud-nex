@@ -10,7 +10,7 @@ export default function ServiceCtaBanner({ data, className = "" }: SectionProps<
   const ctaBanner = data || site.ctaBanner;
 
   return (
-    <section className={`bg-white pb-16 lg:pb-24 px-6 sm:px-10 lg:px-16 font-sans ${className}`}>
+    <section className={`bg-white pb-12 lg:pb-14 px-6 sm:px-10 lg:px-16 font-sans ${className}`}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

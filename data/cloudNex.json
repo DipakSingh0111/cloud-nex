@@ -556,29 +556,29 @@
                   "list": [
                     {
                       "icon": "Rocket",
-                      "iconBg": "bg-blue-100",
-                      "iconColor": "text-blue-600",
+                      "iconBg": "bg-[#1a6dff]",
+                      "iconColor": "text-white",
                       "title": "Modern Technologies",
                       "description": "We use the latest frameworks and tools to build future-ready web solutions."
                     },
                     {
-                      "icon": "Users",
-                      "iconBg": "bg-green-100",
-                      "iconColor": "text-green-600",
+                      "icon": "UsersRound",
+                      "iconBg": "bg-[#3c9a1f]",
+                      "iconColor": "text-white",
                       "title": "User-Focused Design",
                       "description": "Clean, engaging and intuitive designs for better user experience."
                     },
                     {
                       "icon": "ShieldCheck",
-                      "iconBg": "bg-blue-100",
-                      "iconColor": "text-blue-600",
+                      "iconBg": "bg-[#1a6dff]",
+                      "iconColor": "text-white",
                       "title": "Security & Reliability",
                       "description": "Robust security measures to keep your data and users protected."
                     },
                     {
-                      "icon": "TrendingUp",
-                      "iconBg": "bg-green-100",
-                      "iconColor": "text-green-600",
+                      "icon": "ChartColumnIncreasing",
+                      "iconBg": "bg-[#3c9a1f]",
+                      "iconColor": "text-white",
                       "title": "Business Growth",
                       "description": "Web solutions designed to generate leads, improve engagement and drive growth."
                     }
@@ -705,9 +705,9 @@
                 ],
                 "filterIcons": {
                   "Cloud Migration": "Cloud",
-                  "Data Center": "Database",
+                  "Data Center": "Server",
                   "Cyber Security": "ShieldCheck",
-                  "Managed Services": "Users",
+                  "Managed Services": "UsersRound",
                   "IT Solutions": "LayoutGrid"
                 },
                 "viewDetailsLabel": "View Details",
@@ -726,7 +726,7 @@
                     "title": "Data Center Infrastructure Setup",
                     "description": "Designed and deployed a high-performance data center solution with 99.99% uptime for a fintech company.",
                     "image": "/images/images_07.jpg",
-                    "icon": "Database",
+                    "icon": "Server",
                     "link": "/portfolio/data-center-infrastructure-setup",
                     "slug": "data-center-infrastructure-setup"
                   },
@@ -744,7 +744,7 @@
                     "title": "Managed IT Services for Healthcare",
                     "description": "Provided 24/7 monitoring and support for a healthcare provider, ensuring uninterrupted operations and better patient care.",
                     "image": "/images/images_09.jpg",
-                    "icon": "Users",
+                    "icon": "UsersRound",
                     "link": "/portfolio/managed-it-services-healthcare",
                     "slug": "managed-it-services-healthcare"
                   },
@@ -1006,6 +1006,10 @@
               },
               "description": "Stay updated with the latest trends, insights and expert advice on cloud solutions, IT infrastructure, cyber security and digital transformation.",
               "readMore": "Read More",
+              "cta": {
+                "label": "View All Blogs",
+                "href": "/blog"
+              },
               "details": {
                 "miniBreadcrumbs": [
                   {
@@ -1512,7 +1516,10 @@
                   },
                   {
                     "title": "Email Us",
-                    "lines": ["info@cloudnex.com", "We reply within 24 hours"],
+                    "lines": [
+                      "info@cloudnex.com",
+                      "We reply within 24 hours"
+                    ],
                     "icon": "Mail",
                     "color": "blue"
                   }

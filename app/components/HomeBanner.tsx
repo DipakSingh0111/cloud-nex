@@ -38,8 +38,8 @@ export default function HomeBanner({ data, className = "" }: SectionProps<HeroBa
       {/* Keeps text readable on small screens where the image is cropped behind it */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/20 lg:hidden" />
 
-      <div className="relative z-10 w-full px-5 sm:px-8 lg:px-0 lg:pl-[6.5vw]">
-        <div className="w-full lg:w-[45vw] font-sans">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full lg:w-[min(45vw,720px)] font-sans">
           <div className="flex items-center gap-4 mb-4 lg:mb-[clamp(10px,1vw,18px)]">
             <span className="text-[#5b6a7a] text-xs sm:text-[13px] lg:text-[clamp(11px,0.85vw,14px)] font-semibold tracking-[0.2em] uppercase">
               {homeBanner.badge}

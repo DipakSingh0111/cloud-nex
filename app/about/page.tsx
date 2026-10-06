@@ -17,8 +17,8 @@ export default function Page() {
         }}
       />
       <AboutSection data={site.about} />
-      <WhyChooseUs data={site.whyChooseUs} />
       <HowItWorks data={site.workingProcess} />
+      <WhyChooseUs data={site.whyChooseUs} />
     </div>
   );
 }

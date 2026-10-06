@@ -11,7 +11,7 @@ export default function PortfolioPage() {
       <PageBanner data={site.pageBanners.pages.portfolio} />
       <PortfolioSection data={site.portfolio.projects} />
       <HowItWorks data={site.workingProcess} />
-      <div className="pt-16 lg:pt-24 bg-white">
+      <div className="pt-12 lg:pt-14 bg-white">
         <ServiceCtaBanner data={site.ctaBanner} />
       </div>
     </main>

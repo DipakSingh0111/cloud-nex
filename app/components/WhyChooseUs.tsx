@@ -47,25 +47,25 @@ export default function WhyChooseUs({ data, className = "" }: SectionProps<WhyCh
 
   return (
     <section className={`bg-white pt-4 lg:pt-8 pb-4 lg:pb-6 px-4 sm:px-6 lg:px-8 ${className}`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-14 items-center mb-10">
-          <div className="relative lg:ml-10 order-2 lg:order-2">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(11,37,69,0.15)]">
+      <div className="max-w-[1216px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-12 lg:gap-20 items-stretch mb-10">
+          <div className="relative">
+            <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(11,37,69,0.15)]">
               <Image
                 src={whyChooseUs.images.main}
                 alt="Cloud engineer working in a data center"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover"
+                className="object-cover object-[30%_center]"
               />
             </div>
 
-            <div className="absolute top-[22%] right-3 lg:-right-14">
+            <div className="absolute top-[28%] right-3 lg:-right-16 z-10">
               <RotatingBadge text={whyChooseUs.badgeRingText} />
             </div>
           </div>
 
-          <div className="order-1 lg:order-1">
+          <div className="lg:py-2">
             <span className="inline-block bg-[#e8f1ff] text-[#1a5fd6] text-sm font-semibold italic tracking-wide px-4 py-1.5 rounded-md mb-4">
               {whyChooseUs.badge}
             </span>

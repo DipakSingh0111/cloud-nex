@@ -9,9 +9,7 @@ export default function BlogPage() {
     <main className="bg-white flex flex-col">
       <PageBanner data={site.pageBanners.pages.blog} />
       <BlogSection data={site.blog} />
-      <div className="bg-white pb-8">
-        <ServiceCtaBanner data={site.ctaBanner} />
-      </div>
+      <ServiceCtaBanner data={site.ctaBanner} />
     </main>
   );
 }
