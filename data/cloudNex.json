@@ -51,7 +51,7 @@
               },
               "contact": {
                 "address": "123 Tech Avenue, Suite 400, San Francisco, CA, USA - 94107",
-                "phone": "+1 415 555 1234",
+                "phone": "0000000000",
                 "email": "info@cloudnex.com"
               },
               "socials": [
@@ -82,7 +82,7 @@
         "Topbar": {
           "variants": {
             "CloudNexTopbar1": {
-              "phone": "+1 415 555 1234",
+              "phone": "0000000000",
               "email": "info@xyz.com",
               "address": "123 Tech Ave, San Francisco, CA, USA",
               "socials": [
@@ -1569,7 +1569,7 @@
               "contactCard": {
                 "title": "Prefer to Talk?",
                 "description": "Call or email us and our team will help you right away.",
-                "phone": "+1 415 555 1234",
+                "phone": "0000000000",
                 "email": "info@cloudnex.com"
               },
               "form": {
