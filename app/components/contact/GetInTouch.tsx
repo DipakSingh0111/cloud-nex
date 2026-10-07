@@ -36,14 +36,10 @@ export default function GetInTouch({ data, className = "" }: SectionProps<GetInT
                   >
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="w-24 shrink-0 text-sm font-bold text-[#0B2545]">
-                    {item.title}
-                  </h3>
-                  <div className="text-[13px] leading-relaxed">
-                    <p className="font-semibold text-[#0B2545]">
-                      {item.lines[0]}
-                    </p>
-                    <p className="text-[#4a5868]">{item.lines[1]}</p>
+                  <div className="text-sm leading-relaxed font-semibold text-[#0B2545]" aria-label={item.title}>
+                    {item.lines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
                   </div>
                 </div>
               );

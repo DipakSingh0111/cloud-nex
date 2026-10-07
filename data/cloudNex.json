@@ -51,7 +51,7 @@
               },
               "contact": {
                 "address": "123 Tech Avenue, Suite 400, San Francisco, CA, USA - 94107",
-                "phone": "0000000000",
+                "phone": "+1 000 000 0000",
                 "email": "info@cloudnex.com"
               },
               "socials": [
@@ -82,7 +82,7 @@
         "Topbar": {
           "variants": {
             "CloudNexTopbar1": {
-              "phone": "0000000000",
+              "phone": "+1 000 000 0000",
               "email": "info@xyz.com",
               "address": "123 Tech Ave, San Francisco, CA, USA",
               "socials": [
@@ -1498,28 +1498,19 @@
                 "list": [
                   {
                     "title": "Our Office",
-                    "lines": [
-                      "123 Tech Avenue, Suite 400,",
-                      "San Francisco, CA, USA - 94107"
-                    ],
+                    "lines": ["123 Tech Ave, San Francisco, CA, USA"],
                     "icon": "MapPin",
                     "color": "blue"
                   },
                   {
                     "title": "Call Us",
-                    "lines": [
-                      "+1 415 555 1234",
-                      "Mon - Sat, 9:00 AM to 6:00 PM"
-                    ],
+                    "lines": ["+1 000 000 0000"],
                     "icon": "Phone",
                     "color": "green"
                   },
                   {
                     "title": "Email Us",
-                    "lines": [
-                      "info@cloudnex.com",
-                      "We reply within 24 hours"
-                    ],
+                    "lines": ["info@xyz.com"],
                     "icon": "Mail",
                     "color": "blue"
                   }
@@ -1569,8 +1560,8 @@
               "contactCard": {
                 "title": "Prefer to Talk?",
                 "description": "Call or email us and our team will help you right away.",
-                "phone": "0000000000",
-                "email": "info@cloudnex.com"
+                "phone": "+1 000 000 0000",
+                "email": "info@xyz.com"
               },
               "form": {
                 "heading": {

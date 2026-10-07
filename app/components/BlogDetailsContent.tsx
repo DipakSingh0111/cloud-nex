@@ -63,18 +63,6 @@ export default function BlogDetailsContent({ data, className = "" }: SectionProp
   return (
     <section className={`bg-white pt-8 lg:pt-10 pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        <nav className="flex flex-wrap items-center gap-2 text-[13px] text-[#5c6a7a] mb-6">
-          {details.miniBreadcrumbs.map((crumb) => (
-            <span key={crumb.label} className="flex items-center gap-2">
-              <Link href={crumb.href} className="hover:text-[#1a6dff] transition-colors">
-                {crumb.label}
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            </span>
-          ))}
-          <span className="text-[#0B2545] font-medium">{post.title}</span>
-        </nav>
-
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 lg:gap-12">
           <article>
             <span className="inline-block border border-[#3cb043]/50 text-[#2e9b2e] bg-[#f2fbf2] uppercase text-[11px] font-bold tracking-widest px-3.5 py-1 rounded-full mb-4">

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, ChevronRight, ChevronUp, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { site, type FooterData, type SectionProps } from "@/data";
 
 const socialIcons: Record<string, React.ReactNode> = {
@@ -66,9 +66,6 @@ export default function Footer({ data, className = "" }: SectionProps<FooterData
     { icon: Mail, value: contact.email, color: "text-[#3dd68c]" },
     { icon: MapPin, value: contact.address, color: "text-[#3aa0ff]" },
   ];
-
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <footer className={`relative bg-[#03102a] text-white pt-16 lg:pt-20 overflow-hidden ${className}`}>
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -98,9 +95,10 @@ export default function Footer({ data, className = "" }: SectionProps<FooterData
               <Image
                 src="/images/footer_logo.png"
                 alt={site.global.logo.alt}
-                width={300}
-                height={90}
-                className="h-[70px] object-contain w-auto"
+                width={1376}
+                height={296}
+                sizes="254px"
+                className="w-[191px] sm:w-[239px] lg:w-[254px] h-auto object-contain"
               />
             </Link>
 
@@ -147,32 +145,6 @@ export default function Footer({ data, className = "" }: SectionProps<FooterData
               ))}
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div className="relative z-10 border-t border-white/10">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col md:flex-row items-start md:items-center md:justify-center gap-4 md:gap-0 text-sm text-gray-200 pr-14 md:pr-16">
-            {contactItems.map(({ icon: Icon, value }, i) => (
-              <React.Fragment key={value}>
-                {i > 0 && <span className="hidden md:block w-px h-6 bg-white/20 mx-8" />}
-                <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 shrink-0 rounded-full bg-[#5fa815] flex items-center justify-center text-white">
-                    <Icon className="w-4 h-4" />
-                  </span>
-                  <span>{value}</span>
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-
-          <button
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            className="absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border-2 border-[#1a8cff] text-[#1a8cff] hover:bg-[#1a8cff] hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-          >
-            <ChevronUp className="w-5 h-5" />
-          </button>
         </div>
       </div>
 
