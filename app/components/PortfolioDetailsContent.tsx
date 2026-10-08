@@ -176,26 +176,7 @@ export default function PortfolioDetailsContent({ data, className = "" }: Sectio
                 <ArrowRight className="w-5 h-5 stroke-[2.5]" />
               </Link>
 
-              <div className="mt-10">
-                <h4 className="text-[17px] font-bold text-[#0a1a44] mb-5">{information.shareTitle}</h4>
-                <div className="flex flex-wrap gap-3">
-                  <button className="w-11 h-11 rounded-full bg-white flex items-center justify-center border border-slate-200 text-[#5c6a7a] hover:bg-[#1a6dff] hover:text-white hover:border-[#1a6dff] transition-all shadow-sm">
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
-                  </button>
-                  <button className="w-11 h-11 rounded-full bg-white flex items-center justify-center border border-slate-200 text-[#5c6a7a] hover:bg-[#1a6dff] hover:text-white hover:border-[#1a6dff] transition-all shadow-sm">
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
-                  </button>
-                  <button className="w-11 h-11 rounded-full bg-white flex items-center justify-center border border-slate-200 text-[#5c6a7a] hover:bg-[#1a6dff] hover:text-white hover:border-[#1a6dff] transition-all shadow-sm">
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
-                  </button>
-                  <button className="w-11 h-11 rounded-full bg-white flex items-center justify-center border border-slate-200 text-[#5c6a7a] hover:bg-[#1a6dff] hover:text-white hover:border-[#1a6dff] transition-all shadow-sm">
-                    <LinkIcon className="w-4 h-4" />
-                  </button>
-                  <button className="w-11 h-11 rounded-full bg-white flex items-center justify-center border border-slate-200 text-[#5c6a7a] hover:bg-[#1a6dff] hover:text-white hover:border-[#1a6dff] transition-all shadow-sm">
-                    <Mail className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
+
 
             </div>
           </div>
